@@ -150,7 +150,9 @@ main,footer{position:relative;z-index:1}
 .crow .k{min-width:120px;color:var(--ink-2);font-size:13px;font-weight:650}
 .crow .v{font-weight:600;color:var(--ink)}
 .crow a{color:var(--ink);text-underline-offset:3px}
-.thumbbtn{border:0;padding:0;background:none;cursor:zoom-in;flex:none;line-height:0;border-radius:6px}
+.thumbbtn{border:0;padding:0;background:none;cursor:zoom-in;flex:none;line-height:0;border-radius:6px;position:relative;overflow:hidden}
+.artbadge{position:absolute;inset-inline:0;bottom:0;background:rgba(15,31,36,.72);color:#fff;font:600 10px/1.5 var(--font);text-align:center;line-height:1.6}
+dialog.photo .muted{margin:0 0 10px;color:var(--ink-2);font-size:13px;font-weight:400}
 dialog.photo{width:min(92vw,560px);margin:auto;border-radius:12px;padding:12px;text-align:center}
 dialog.photo img{width:100%;height:auto;max-height:68vh;object-fit:contain;border-radius:8px;background:#E3E9EA;display:block}
 dialog.photo p{margin:10px 0;font-weight:700}
@@ -230,6 +232,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
 <dialog id="photo" class="photo" aria-labelledby="photo-cap">
   <img id="photo-img" alt="">
   <p id="photo-cap"></p>
+  <p id="photo-note" class="muted" hidden></p>
   <button id="photo-close" class="btn ghost" type="button" data-i18n="close"></button>
 </dialog>
 
@@ -276,6 +279,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
 </dialog>
 
 <script src="catalog-config.js"></script>
+<script src="part-art.js"></script>
 <script>
 (function(){
 'use strict';
@@ -311,6 +315,7 @@ const I18N = {
     receiveTitle:'How would you like to receive it?', fWhenDate:'Preferred date', fWhenTime:'Preferred time', whenOptional:'(optional)',
     needReceive:'Choose how you want to receive the order.', needAddress:'Enter your delivery address.', needWhen:'Choose a date and a time for delivery.',
     codPickup:'Pay at the shop', fitsAsk:'Ask us which bikes it fits',
+    illus:'Illustration', illusNote:'Illustration only. The actual part may look different.', viewIllus:'View illustration of {name}',
     pay:'Payment', cod:'Cash on delivery', wallet:'JazzCash / Easypaisa', bank:'Bank transfer',
     send:'Send order on WhatsApp', needName:'Enter your name to send the order.',
     noNumber:'The shop WhatsApp number is not set yet.',
@@ -338,6 +343,7 @@ const I18N = {
     receiveTitle:'آپ آرڈر کیسے وصول کرنا چاہتے ہیں؟', fWhenDate:'پسندیدہ تاریخ', fWhenTime:'پسندیدہ وقت', whenOptional:'(اختیاری)',
     needReceive:'آرڈر وصول کرنے کا طریقہ منتخب کریں۔', needAddress:'ڈیلیوری کا پتہ لکھیں۔', needWhen:'ڈیلیوری کی تاریخ اور وقت منتخب کریں۔',
     codPickup:'دکان پر ادائیگی', fitsAsk:'ہم سے پوچھیں کہ کن بائیکس پر لگتا ہے',
+    illus:'خاکہ', illusNote:'صرف نمونہ خاکہ۔ اصل پرزہ مختلف نظر آ سکتا ہے۔', viewIllus:'{name} کا خاکہ دیکھیں',
     pay:'ادائیگی کا طریقہ', cod:'کیش آن ڈیلیوری', wallet:'جاز کیش / ایزی پیسہ', bank:'بینک ٹرانسفر',
     send:'واٹس ایپ پر آرڈر بھیجیں', needName:'آرڈر بھیجنے کے لیے اپنا نام لکھیں۔',
     noNumber:'دکان کا واٹس ایپ نمبر ابھی سیٹ نہیں ہے۔',
@@ -435,7 +441,7 @@ function normalize(r, i){
   return {
     id: r.id != null && r.id !== '' ? String(r.id) : 'i' + i,
     name: String(r.name).trim(), models, universal, bikeKeys: models.map(bikeKey),
-    company: r.company ? String(r.company) : '', grade: r.grade ? String(r.grade) : '',
+    company: r.company ? String(r.company) : '', grade: r.grade ? String(r.grade) : '', category: r.category ? String(r.category) : '',
     code: r.code ? String(r.code) : '', image: r.image ? String(r.image) : '',
     price, stock, status, maxQty, canOrder: status !== 'out' && price !== null,
     hay, compact: hay.replace(/[\s\-_.]+/g,'')
@@ -623,10 +629,20 @@ function showPhoto(row, it, src){
   const ask = row.querySelector('[data-ask]');
   if(ask){ ask.textContent = t('askPart'); ask.setAttribute('href', waLink(askMessage(it, 'ask'))); }
 }
+function showArt(row, it){
+  if(CONFIG.showIllustrations === false || !window.PartArt) return;
+  const r1 = row.querySelector('.row1');
+  if(!r1 || r1.querySelector('.thumbbtn')) return;
+  const src = PartArt.dataUri(PartArt.keyFor(it.name, it.category));
+  const img = h('img', { class:'thumb', src, alt:'', width:'76', height:'76', decoding:'async' });
+  const btn = h('button', { class:'thumbbtn art', type:'button', 'aria-label':t('viewIllus', { name:it.name }),
+                            onclick:() => openPhoto(src, it.name, true) }, img, h('span', { class:'artbadge', text:t('illus') }));
+  r1.insertBefore(btn, r1.firstChild);
+}
 function loadPhoto(row){
   const it = byId.get(row.dataset.id); if(!it) return;
   const srcs = photoSources(it); let i = 0;
-  const next = () => { if(i >= srcs.length) return; const src = srcs[i++]; probe(src, () => showPhoto(row, it, src), next); };
+  const next = () => { if(i >= srcs.length){ showArt(row, it); return; } const src = srcs[i++]; probe(src, () => showPhoto(row, it, src), next); };
   next();
 }
 function observePhotos(){
@@ -638,8 +654,9 @@ function observePhotos(){
   }, { rootMargin:'300px' });
   rows.forEach(r => photoObserver.observe(r));
 }
-function openPhoto(src, name){
+function openPhoto(src, name, isArt){
   $('#photo-img').src = src; $('#photo-cap').textContent = name;
+  const note = $('#photo-note'); note.hidden = !isArt; note.textContent = isArt ? t('illusNote') : '';
   $('#photo').showModal();
 }
 
