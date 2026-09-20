@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Photo helper – Malik Autoz</title>
+<style>
+:root{--paper:#F2F5F5;--surface:#fff;--ink:#0F1F24;--ink-2:#465960;--line:#D3DBDD;--amber:#FFC20E;--ok:#0B7A4B;--out:#B3261E;
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--font)}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #1B5FD6;outline-offset:2px}
+header{background:var(--ink);color:#fff;padding:16px 0 20px;position:relative}
+header::after{content:"";position:absolute;inset-inline:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 26px,transparent 26px 40px)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header h1{margin:0;font-size:24px}
+header p{margin:2px 0 0;opacity:.85;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.card h2{margin:0 0 6px;font-size:18px}
+.muted{color:var(--ink-2);font-size:14px}
+.btn{min-height:46px;padding:0 18px;border:0;border-radius:8px;background:var(--amber);color:var(--ink);font:inherit;font-weight:750;cursor:pointer}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:var(--surface);border:2px solid var(--ink)}
+input[type=file]{width:100%;padding:12px;border:2px dashed var(--ink);border-radius:8px;background:var(--paper);font:inherit}
+.pcard{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--line);padding:12px 0}
+.prev{width:84px;height:84px;object-fit:cover;border-radius:6px;background:#E3E9EA;flex:none}
+.pbody{flex:1;min-width:0}
+.fname{font-size:13px;color:var(--ink-2);overflow-wrap:anywhere}
+.pick{width:100%;min-height:44px;margin-top:6px;padding:8px 10px;border:2px solid var(--ink);border-radius:8px;font:inherit;font-size:16px}
+.pstat{font-size:13px;font-weight:650;margin-top:4px;min-height:1.3em}
+.pstat.ok{color:var(--ok)} .pstat.bad{color:var(--out)}
+.rm{background:none;border:0;font-size:20px;cursor:pointer;min-width:40px;min-height:40px}
+ul.miss{margin:8px 0 0;padding-inline-start:20px;font-size:14px;max-height:240px;overflow:auto}
+ol{padding-inline-start:22px;margin:6px 0}
+li{margin:4px 0}
+code{background:var(--paper);padding:1px 6px;border-radius:4px}
+#result table{border-collapse:collapse;font-size:14px;margin-top:8px}
+#result td,#result th{border-bottom:1px solid var(--line);padding:4px 10px;text-align:start}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Photo helper</h1><p>Resize phone photos, name them after each part, and get a ready-to-upload folder.</p></div></header>
+
+<main class="wrap">
+  <section class="card">
+    <h2>1. Which parts still need a photo?</h2>
+    <p class="muted" id="status">Checking your catalog…</p>
+    <details id="missWrap" hidden><summary>Show parts without a photo</summary><ul class="miss" id="missing"></ul></details>
+    <p><button class="btn ghost" id="recheck" type="button" hidden>Check again</button></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Choose your photos</h2>
+    <p class="muted">Plain surface, daylight, the whole part in the picture. If a photo file is already named after the part's SKU (like <code>ENG-0001.jpg</code>), it is matched automatically. Do about 20 to 40 photos at a time.</p>
+    <input id="files" type="file" accept="image/*" multiple>
+  </section>
+
+  <section class="card" id="work" hidden>
+    <h2>3. Match each photo to a part</h2>
+    <p class="muted">Click the box under a photo and start typing the part name or SKU, then pick it from the list.</p>
+    <datalist id="parts"></datalist>
+    <div id="cards"></div>
+    <p><button class="btn" id="make" type="button" disabled>Prepare photos and download ZIP</button></p>
+    <div id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <h2>4. Put them on the website</h2>
+    <ol>
+      <li>Find the downloaded ZIP, right-click it and choose <b>Extract All</b>.</li>
+      <li>Open the extracted folder. Inside is a folder called <code>img</code>.</li>
+      <li>On GitHub, open the <code>malikautoz-shop</code> repository, click <b>Add file → Upload files</b>, and drag the whole <code>img</code> folder onto the page.</li>
+      <li>Click <b>Commit changes</b>. In about a minute the photos appear on the shop page. If GitHub complains about too many files, upload in smaller batches.</li>
+    </ol>
+    <p class="muted">A new photo for a part that already has one simply replaces it. Photos are made about 800 pixels wide, usually under 100 KB each.</p>
+  </section>
+</main>
+
+<script>
+(function(){
+'use strict';
+const MAX_SIDE = 800;
+const BAD_NAME = /[\\\/:*?"<>|]/;
+const $ = s => document.querySelector(s);
+const state = { items: [], have: new Map(), entries: [] };   // have: code -> 'webp' | 'jpg' | ''
+
+/* ---------- catalog + which parts already have photos ---------- */
+function probe(src){
+  return new Promise(res => { const im = new Image(); im.onload = () => res(true); im.onerror = () => res(false); im.src = src; });
+}
+async function hasPhoto(code){
+  const base = 'img/' + encodeURIComponent(code);
+  if(await probe(base + '.webp')) return 'webp';
+  if(await probe(base + '.jpg')) return 'jpg';
+  return '';
+}
+async function checkAll(){
+  $('#status').textContent = 'Checking which parts have photos…';
+  const list = state.items.slice(); let done = 0;
+  state.have = new Map();
+  async function worker(){
+    while(list.length){
+      const it = list.shift();
+      state.have.set(it.code, await hasPhoto(it.code));
+      done++;
+      if(done % 10 === 0) $('#status').textContent = 'Checking… ' + done + ' of ' + state.items.length;
+    }
+  }
+  await Promise.all([worker(), worker(), worker(), worker(), worker(), worker()]);
+  renderStatus();
+}
+function renderStatus(){
+  const total = state.items.length;
+  const missing = state.items.filter(i => !state.have.get(i.code));
+  $('#status').textContent = (total - missing.length) + ' of ' + total + ' parts have a photo.' + (missing.length ? ' ' + missing.length + ' still need one.' : ' All done.');
+  const ul = $('#missing'); ul.replaceChildren();
+  missing.slice(0, 300).forEach(i => { const li = document.createElement('li'); li.textContent = i.code + ' — ' + i.name + (i.models && i.models.length ? ' (' + i.models.join(', ') + ')' : ''); ul.append(li); });
+  $('#missWrap').hidden = missing.length === 0;
+  $('#recheck').hidden = false;
+}
+async function loadCatalog(){
+  try{
+    const res = await fetch('catalog.json', { cache:'no-cache' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const arr = Array.isArray(data) ? data : data.items;
+    state.items = (arr || []).filter(i => i && i.name && i.code).map(i => ({ code:String(i.code), name:String(i.name), models:i.models || [] }));
+    if(!state.items.length){ $('#status').textContent = 'The catalog has no parts with a SKU yet. Publish your catalog from the POS first.'; return; }
+    const dl = $('#parts'); dl.replaceChildren();
+    state.items.forEach(i => { const o = document.createElement('option'); o.value = i.code + ' | ' + i.name; dl.append(o); });
+    checkAll();
+  }catch(e){
+    $('#status').textContent = 'Could not load the catalog. Open this page from your shop address (…workers.dev/photo-helper.html), not from a file on your computer.';
+  }
+}
+function findItem(text){
+  const t = String(text || '').trim(); if(!t) return null;
+  const code = (t.indexOf(' | ') > -1 ? t.split(' | ')[0] : t).trim().toLowerCase();
+  const byCode = state.items.find(i => i.code.toLowerCase() === code);
+  if(byCode) return byCode;
+  const byName = state.items.filter(i => i.name.toLowerCase() === t.toLowerCase());
+  return byName.length === 1 ? byName[0] : null;
+}
+
+/* ---------- photo cards ---------- */
+function fmtSize(n){ return n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.round(n / 1024) + ' KB'; }
+function addFiles(fileList){
+  Array.from(fileList).forEach(file => {
+    if(!/^image\//.test(file.type)) return;
+    const e = { file, url: URL.createObjectURL(file), code:'' };
+    const base = file.name.replace(/\.[^.]+$/, '');
+    const auto = state.items.find(i => i.code.toLowerCase() === base.toLowerCase());
+    if(auto) e.code = auto.code;
+    state.entries.push(e);
+  });
+  renderCards();
+}
+function renderCards(){
+  const box = $('#cards'); box.replaceChildren();
+  state.entries.forEach((e, idx) => {
+    const item = state.items.find(i => i.code === e.code);
+    const card = document.createElement('div'); card.className = 'pcard';
+    const img = document.createElement('img'); img.className = 'prev'; img.src = e.url; img.alt = '';
+    const body = document.createElement('div'); body.className = 'pbody';
+    const fn = document.createElement('div'); fn.className = 'fname'; fn.textContent = e.file.name + ' (' + fmtSize(e.file.size) + ')';
+    const inp = document.createElement('input'); inp.className = 'pick'; inp.setAttribute('list', 'parts'); inp.placeholder = 'Type part name or SKU…';
+    inp.setAttribute('aria-label', 'Part for ' + e.file.name);
+    inp.value = item ? item.code + ' | ' + item.name : '';
+    inp.addEventListener('change', () => { const f = findItem(inp.value); e.code = f ? f.code : ''; renderStatusLines(); });
+    const st = document.createElement('div'); st.className = 'pstat'; st.id = 'pstat-' + idx;
+    body.append(fn, inp, st);
+    const rm = document.createElement('button'); rm.className = 'rm'; rm.type = 'button'; rm.textContent = '✕'; rm.setAttribute('aria-label', 'Remove ' + e.file.name);
+    rm.addEventListener('click', () => { URL.revokeObjectURL(e.url); state.entries.splice(idx, 1); renderCards(); });
+    card.append(img, body, rm); box.append(card);
+  });
+  $('#work').hidden = state.entries.length === 0;
+  renderStatusLines();
+}
+function renderStatusLines(){
+  const counts = new Map();
+  state.entries.forEach(e => { if(e.code) counts.set(e.code, (counts.get(e.code) || 0) + 1); });
+  let ready = 0, problems = 0;
+  state.entries.forEach((e, idx) => {
+    const st = document.getElementById('pstat-' + idx); if(!st) return;
+    st.className = 'pstat';
+    if(!e.code){ st.textContent = 'Pick the part for this photo.'; problems++; return; }
+    if(BAD_NAME.test(e.code)){ st.textContent = 'This SKU has characters that cannot be used in a file name. Change the SKU in Inventory first.'; st.className = 'pstat bad'; problems++; return; }
+    if(counts.get(e.code) > 1){ st.textContent = 'Two photos are set for this part. Remove one.'; st.className = 'pstat bad'; problems++; return; }
+    const had = state.have.get(e.code);
+    st.textContent = had ? 'Ready. This will replace the current photo.' : 'Ready.';
+    st.className = 'pstat ok'; ready++;
+  });
+  $('#make').disabled = !(ready > 0 && problems === 0);
+}
+
+/* ---------- convert + zip ---------- */
+async function loadBitmap(file){
+  if(window.createImageBitmap){ try{ return await createImageBitmap(file); }catch(e){} }
+  return await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = URL.createObjectURL(file); });
+}
+async function convert(file){
+  const bmp = await loadBitmap(file);
+  const w0 = bmp.width || bmp.naturalWidth, h0 = bmp.height || bmp.naturalHeight;
+  const k = Math.min(1, MAX_SIDE / Math.max(w0, h0));
+  const w = Math.max(1, Math.round(w0 * k)), h = Math.max(1, Math.round(h0 * k));
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h); ctx.drawImage(bmp, 0, 0, w, h);
+  let blob = await new Promise(r => c.toBlob(r, 'image/webp', 0.8)), ext = 'webp';
+  if(!blob || blob.type !== 'image/webp'){ blob = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.82)); ext = 'jpg'; }
+  if(bmp.close) bmp.close();
+  return { data: new Uint8Array(await blob.arrayBuffer()), ext, w, h };
+}
+const CRC_TABLE = (() => { const t = new Uint32Array(256); for(let n = 0; n < 256; n++){ let c = n; for(let k = 0; k < 8; k++) c = c & 1 ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); t[n] = c >>> 0; } return t; })();
+function crc32(u8){ let c = 0xFFFFFFFF; for(let i = 0; i < u8.length; i++) c = CRC_TABLE[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function makeZip(files){
+  const enc = new TextEncoder(), parts = [], central = []; let offset = 0;
+  const d = new Date();
+  const dosTime = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+  const dosDate = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+  files.forEach(f => {
+    const name = enc.encode(f.name), crc = crc32(f.data), size = f.data.length;
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, dosTime, true); lh.setUint16(12, dosDate, true); lh.setUint32(14, crc, true);
+    lh.setUint32(18, size, true); lh.setUint32(22, size, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), name, f.data);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, dosTime, true); ch.setUint16(14, dosDate, true); ch.setUint32(16, crc, true);
+    ch.setUint32(20, size, true); ch.setUint32(24, size, true); ch.setUint16(28, name.length, true);
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), name);
+    offset += 30 + name.length + size;
+  });
+  let csize = 0; central.forEach(c => csize += c.length);
+  const end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, csize, true); end.setUint32(16, offset, true);
+  return new Blob(parts.concat(central, [new Uint8Array(end.buffer)]), { type:'application/zip' });
+}
+async function make(){
+  const btn = $('#make'), out = $('#result');
+  btn.disabled = true; out.textContent = 'Preparing…';
+  try{
+    const files = [], rows = [];
+    for(let i = 0; i < state.entries.length; i++){
+      const e = state.entries[i];
+      out.textContent = 'Preparing photo ' + (i + 1) + ' of ' + state.entries.length + '…';
+      const r = await convert(e.file);
+      files.push({ name: 'img/' + e.code + '.' + r.ext, data: r.data });
+      rows.push([e.code + '.' + r.ext, r.w + ' × ' + r.h, fmtSize(r.data.length)]);
+    }
+    const blob = makeZip(files);
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'img-photos.zip';
+    document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    const tbl = document.createElement('table');
+    tbl.innerHTML = '<tr><th>File</th><th>Size</th><th>Weight</th></tr>';
+    rows.forEach(r => { const tr = document.createElement('tr'); r.forEach(c => { const td = document.createElement('td'); td.textContent = c; tr.append(td); }); tbl.append(tr); });
+    out.replaceChildren(Object.assign(document.createElement('p'), { textContent: 'Done. ' + files.length + ' photo(s) saved in img-photos.zip. Now follow step 4 below.' }), tbl);
+    if(rows.some(r => /\.jpg$/.test(r[0]))){
+      const note = document.createElement('p'); note.className = 'muted';
+      note.textContent = 'Your browser saved some photos as JPG. If a part already had a WebP photo, delete the old one on GitHub or the old picture will keep showing.';
+      out.append(note);
+    }
+  }catch(err){
+    out.textContent = 'Something went wrong while preparing the photos. Try fewer photos at a time.';
+    console.error(err);
+  }
+  renderStatusLines();
+}
+
+$('#files').addEventListener('change', e => { addFiles(e.target.files); e.target.value = ''; });
+$('#make').addEventListener('click', make);
+$('#recheck').addEventListener('click', checkAll);
+loadCatalog();
+})();
+</script>
+</body>
+</html>

@@ -154,6 +154,8 @@ main,footer{position:relative;z-index:1}
 dialog.photo{width:min(92vw,560px);margin:auto;border-radius:12px;padding:12px;text-align:center}
 dialog.photo img{width:100%;height:auto;max-height:68vh;object-fit:contain;border-radius:8px;background:#E3E9EA;display:block}
 dialog.photo p{margin:10px 0;font-weight:700}
+.field select{width:100%;min-height:46px;padding:10px 12px;border:2px solid var(--ink);border-radius:8px;font:inherit;font-size:16px;background:var(--surface);color:var(--ink)}
+#recv-options .opt{align-items:center}
 </style>
 </head>
 <body>
@@ -240,15 +242,27 @@ dialog.photo p{margin:10px 0;font-weight:700}
     <div class="sheet-body">
       <ul id="lines" class="lines"></ul>
       <div class="sum"><span data-i18n="total"></span><span id="total" class="num"></span></div>
-      <p class="note" data-i18n="deliveryNote"></p>
-
       <label class="field"><span data-i18n="fName"></span><input id="f-name" type="text" autocomplete="name"></label>
       <label class="field"><span data-i18n="fBike"></span><input id="f-bike" type="text"></label>
-      <label class="field"><span data-i18n="fCity"></span><input id="f-city" type="text" autocomplete="address-level2"></label>
-      <label class="field"><span data-i18n="fAddress"></span><textarea id="f-address" rows="3" autocomplete="street-address"></textarea></label>
+
+      <fieldset class="pay" id="recv-box">
+        <legend data-i18n="receiveTitle"></legend>
+        <div id="recv-options"></div>
+        <p class="note" id="recv-note" hidden></p>
+      </fieldset>
+      <div id="recv-when" hidden>
+        <label class="field"><span id="when-date-label"></span><input id="f-date" type="date"></label>
+        <label class="field"><span id="when-win-label"></span><select id="f-win"></select></label>
+      </div>
+      <div id="addr-fields" hidden>
+        <label class="field"><span data-i18n="fCity"></span><input id="f-city" type="text" autocomplete="address-level2"></label>
+        <label class="field"><span data-i18n="fAddress"></span><textarea id="f-address" rows="3" autocomplete="street-address"></textarea></label>
+      </div>
+      <p class="note" id="delivery-note" data-i18n="deliveryNote"></p>
+
       <fieldset class="pay">
         <legend data-i18n="pay"></legend>
-        <label class="opt"><input type="radio" name="pay" value="cod" checked><span data-i18n="cod"></span></label>
+        <label class="opt"><input type="radio" name="pay" value="cod" checked><span id="cod-label" data-i18n="cod"></span></label>
         <label class="opt"><input type="radio" name="pay" value="wallet"><span data-i18n="wallet"></span></label>
         <label class="opt"><input type="radio" name="pay" value="bank"><span data-i18n="bank"></span></label>
       </fieldset>
@@ -293,7 +307,10 @@ const I18N = {
     remove:'Remove', clear:'Clear order', total:'Parts total',
     deliveryNote:'Delivery charges are confirmed on WhatsApp before you pay.',
     fName:'Your name', fBike:'Your bike (model and year)', fCity:'City',
-    fAddress:'Full delivery address (leave empty for shop pickup)',
+    fAddress:'Full delivery address',
+    receiveTitle:'How would you like to receive it?', fWhenDate:'Preferred date', fWhenTime:'Preferred time', whenOptional:'(optional)',
+    needReceive:'Choose how you want to receive the order.', needAddress:'Enter your delivery address.', needWhen:'Choose a date and a time for delivery.',
+    codPickup:'Pay at the shop', fitsAsk:'Ask us which bikes it fits',
     pay:'Payment', cod:'Cash on delivery', wallet:'JazzCash / Easypaisa', bank:'Bank transfer',
     send:'Send order on WhatsApp', needName:'Enter your name to send the order.',
     noNumber:'The shop WhatsApp number is not set yet.',
@@ -317,7 +334,10 @@ const I18N = {
     remove:'ہٹائیں', clear:'آرڈر صاف کریں', total:'پارٹس کی کل رقم',
     deliveryNote:'ڈیلیوری چارجز آپ کی ادائیگی سے پہلے واٹس ایپ پر بتائے جائیں گے۔',
     fName:'آپ کا نام', fBike:'آپ کی موٹر سائیکل (ماڈل اور سال)', fCity:'شہر',
-    fAddress:'ڈیلیوری کا مکمل پتہ (دکان سے وصولی کے لیے خالی چھوڑیں)',
+    fAddress:'ڈیلیوری کا مکمل پتہ',
+    receiveTitle:'آپ آرڈر کیسے وصول کرنا چاہتے ہیں؟', fWhenDate:'پسندیدہ تاریخ', fWhenTime:'پسندیدہ وقت', whenOptional:'(اختیاری)',
+    needReceive:'آرڈر وصول کرنے کا طریقہ منتخب کریں۔', needAddress:'ڈیلیوری کا پتہ لکھیں۔', needWhen:'ڈیلیوری کی تاریخ اور وقت منتخب کریں۔',
+    codPickup:'دکان پر ادائیگی', fitsAsk:'ہم سے پوچھیں کہ کن بائیکس پر لگتا ہے',
     pay:'ادائیگی کا طریقہ', cod:'کیش آن ڈیلیوری', wallet:'جاز کیش / ایزی پیسہ', bank:'بینک ٹرانسفر',
     send:'واٹس ایپ پر آرڈر بھیجیں', needName:'آرڈر بھیجنے کے لیے اپنا نام لکھیں۔',
     noNumber:'دکان کا واٹس ایپ نمبر ابھی سیٹ نہیں ہے۔',
@@ -330,12 +350,33 @@ const I18N = {
   }
 };
 const PAY_EN = { cod:'Cash on delivery', wallet:'JazzCash / Easypaisa', bank:'Bank transfer' };
+
+/* How customers can receive an order. To change or remove options, add receiveOptions / timeWindows to
+   catalog-config.js (same shape as below). when: 'none' | 'optional' | 'required' = ask for a date and time window. */
+const RECEIVE_DEFAULTS = [
+  { id:'pickup',    en:'Pick up from the shop',           ur:'دکان سے خود لے جاؤں گا', address:false, when:'optional',
+    note_en:'We will tell you on WhatsApp when it is ready.', note_ur:'تیار ہونے پر ہم واٹس ایپ پر بتا دیں گے۔' },
+  { id:'standard',  en:'Standard delivery',               ur:'عام ڈیلیوری',              address:true,  when:'none', note_en:'', note_ur:'' },
+  { id:'sameday',   en:'Same-day delivery',               ur:'اسی دن ڈیلیوری',           address:true,  when:'none',
+    note_en:'Same-day depends on when you order. We confirm on WhatsApp.', note_ur:'اسی دن کی ڈیلیوری آرڈر کے وقت پر منحصر ہے۔ ہم واٹس ایپ پر تصدیق کریں گے۔' },
+  { id:'urgent',    en:'Urgent delivery (rider right away)', ur:'ارجنٹ ڈیلیوری (فوری رائیڈر)', address:true, when:'none',
+    note_en:'A rider is sent as soon as we confirm your order on WhatsApp. Charges are confirmed first.', note_ur:'واٹس ایپ پر تصدیق کے فوراً بعد رائیڈر بھیجا جاتا ہے۔ چارجز پہلے بتا دیے جاتے ہیں۔' },
+  { id:'scheduled', en:'Delivery at a time I choose',     ur:'میرے منتخب وقت پر ڈیلیوری', address:true,  when:'required',
+    note_en:'Pick a date and a time window. We confirm on WhatsApp.', note_ur:'تاریخ اور وقت کا انتخاب کریں۔ ہم واٹس ایپ پر تصدیق کریں گے۔' }
+];
+const WINDOW_DEFAULTS = [
+  { en:'Morning (9am to 12pm)',   ur:'صبح (9 تا 12 بجے)' },
+  { en:'Afternoon (12pm to 4pm)', ur:'دوپہر (12 تا 4 بجے)' },
+  { en:'Evening (4pm to 8pm)',    ur:'شام (4 تا 8 بجے)' }
+];
+const RECEIVE = (Array.isArray(CONFIG.receiveOptions) && CONFIG.receiveOptions.length) ? CONFIG.receiveOptions : RECEIVE_DEFAULTS;
+const WINDOWS = (Array.isArray(CONFIG.timeWindows) && CONFIG.timeWindows.length) ? CONFIG.timeWindows : WINDOW_DEFAULTS;
 const LS = { cart:'malikautoz_catalog_cart_v1', cust:'malikautoz_catalog_customer_v1', lang:'malikautoz_catalog_lang_v1' };
 
 /* ===== State ===== */
 const $ = s => document.querySelector(s);
 const state = { lang:'en', items:[], bikes:[], bike:'', q:'', inStockOnly:false, page:1,
-                showAllBikes:false, cart:new Map(), updated:'', sample:false, loaded:false };
+                showAllBikes:false, recv:'', win:'', cart:new Map(), updated:'', sample:false, loaded:false };
 let byId = new Map();
 
 function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
@@ -378,7 +419,7 @@ function normalize(r, i){
   const list = (Array.isArray(rawModels) ? rawModels : String(rawModels).split(/[,;|\/]/))
                  .map(s => String(s).trim()).filter(Boolean);
   const isUni = m => /^(universal|all|all bikes)$/i.test(m);
-  const universal = list.length === 0 || list.some(isUni);
+  const universal = list.some(isUni);   // only parts marked Universal / All show under every bike
   const models = list.filter(m => !isUni(m));
 
   let stock = null;
@@ -441,7 +482,7 @@ function filtered(){
 }
 
 /* ===== Rendering ===== */
-function fitsText(it){ return it.models.length ? it.models.join(', ') : t('fitsAll'); }
+function fitsText(it){ return it.universal ? t('fitsAll') : (it.models.length ? it.models.join(', ') : t('fitsAsk')); }
 
 function renderChips(){
   const box = $('#chips'); box.replaceChildren();
@@ -719,18 +760,51 @@ function openSheet(){
 function customer(){
   const pay = document.querySelector('input[name="pay"]:checked');
   return { name:$('#f-name').value.trim(), bike:$('#f-bike').value.trim(), city:$('#f-city').value.trim(),
-           address:$('#f-address').value.trim(), pay: pay ? pay.value : 'cod' };
+           address:$('#f-address').value.trim(), pay: pay ? pay.value : 'cod',
+           recv: state.recv, date: $('#f-date').value, win: $('#f-win').value };
 }
-function saveCustomer(){ lsSet(LS.cust, JSON.stringify(customer())); }
+function saveCustomer(){ const c = customer(); delete c.date; lsSet(LS.cust, JSON.stringify(c)); }
 function restoreCustomer(){
   try{
     const c = JSON.parse(lsGet(LS.cust) || '{}');
     $('#f-name').value = c.name || ''; $('#f-bike').value = c.bike || '';
     $('#f-city').value = c.city || ''; $('#f-address').value = c.address || '';
     const r = document.querySelector('input[name="pay"][value="' + (c.pay || 'cod') + '"]'); if(r) r.checked = true;
+    state.recv = RECEIVE.some(o => o.id === c.recv) ? c.recv : '';
+    state.win = c.win || '';
   }catch(e){}
 }
+
+/* how the customer wants to receive the order */
+function recvOpt(){ return RECEIVE.find(o => o.id === state.recv) || null; }
+function renderRecv(){
+  const box = $('#recv-options'); box.replaceChildren();
+  RECEIVE.forEach(o => box.append(h('label', { class:'opt' },
+    h('input', { type:'radio', name:'recv', value:o.id, checked: state.recv === o.id,
+                 onchange:() => { state.recv = o.id; saveCustomer(); applyRecv(); } }),
+    h('span', { text: state.lang === 'ur' ? (o.ur || o.en) : o.en }))));
+  const sel = $('#f-win'); const keep = state.win || sel.value;
+  sel.replaceChildren(h('option', { value:'', text:'—' }));
+  WINDOWS.forEach((w, i) => sel.append(h('option', { value:String(i), text: state.lang === 'ur' ? (w.ur || w.en) : w.en })));
+  sel.value = keep || '';
+  applyRecv();
+}
+function applyRecv(){
+  const o = recvOpt();
+  $('#addr-fields').hidden = !(o && o.address);
+  $('#delivery-note').hidden = !!(o && !o.address);
+  const when = o ? (o.when || 'none') : 'none';
+  $('#recv-when').hidden = when === 'none';
+  const opt = when === 'optional' ? ' ' + t('whenOptional') : '';
+  $('#when-date-label').textContent = t('fWhenDate') + opt;
+  $('#when-win-label').textContent = t('fWhenTime') + opt;
+  const note = o ? (state.lang === 'ur' ? (o.note_ur || o.note_en || '') : (o.note_en || '')) : '';
+  const n = $('#recv-note'); n.textContent = note; n.hidden = !note;
+  $('#cod-label').textContent = (o && !o.address) ? t('codPickup') : t('cod');
+}
+
 function orderText(f){
+  const o = recvOpt();
   const L = ['Assalam o Alaikum, I would like to order from ' + CONFIG.shopName + ':', ''];
   let n = 1, total = 0;
   for(const [id, q] of state.cart){
@@ -740,14 +814,25 @@ function orderText(f){
   }
   L.push('', 'Parts total: ' + money(total), '', 'Name: ' + f.name);
   if(f.bike) L.push('My bike: ' + f.bike);
-  if(f.city) L.push('City: ' + f.city);
-  L.push('Address: ' + (f.address || 'Shop pickup'), 'Payment: ' + PAY_EN[f.pay], '',
-         'Please confirm availability and delivery charges. (Sent from the website catalog)');
+  L.push('Receive: ' + (o ? o.en : ''));
+  if(o && o.address){ if(f.city) L.push('City: ' + f.city); L.push('Address: ' + f.address); }
+  if(o && (o.when || 'none') !== 'none' && (f.date || f.win !== '')){
+    let d = '';
+    if(f.date){ try{ d = new Date(f.date + 'T00:00:00').toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short' }); }catch(e){ d = f.date; } }
+    const w = (f.win !== '' && WINDOWS[Number(f.win)]) ? WINDOWS[Number(f.win)].en : '';
+    L.push('Preferred time: ' + [d, w].filter(Boolean).join(', '));
+  }
+  const pickup = !!(o && !o.address);
+  L.push('Payment: ' + ((pickup && f.pay === 'cod') ? 'Pay at the shop' : PAY_EN[f.pay]), '',
+         (pickup ? 'Please confirm availability.' : 'Please confirm availability and delivery charges.') + ' (Sent from the website catalog)');
   return L.join('\n');
 }
 function sendOrder(){
-  const f = customer(); const err = $('#err');
+  const f = customer(); const err = $('#err'); const o = recvOpt();
   if(!f.name){ err.textContent = t('needName'); $('#f-name').focus(); return; }
+  if(!o){ err.textContent = t('needReceive'); const r = document.querySelector('input[name="recv"]'); if(r) r.focus(); return; }
+  if(o.address && !f.address){ err.textContent = t('needAddress'); $('#f-address').focus(); return; }
+  if(o.when === 'required' && (!f.date || f.win === '')){ err.textContent = t('needWhen'); (f.date ? $('#f-win') : $('#f-date')).focus(); return; }
   if(!(CONFIG.whatsapp || '').replace(/\D/g,'')){ err.textContent = t('noNumber'); return; }
   err.textContent = '';
   saveCustomer();
@@ -770,6 +855,7 @@ function setLang(l){
   lsSet(LS.lang, l);
   applyStatic();
   renderContact();
+  renderRecv();
   if(state.loaded){ renderChips(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
   else if($('#state').dataset.kind) showState($('#state').dataset.kind);
   updateBar();
@@ -796,6 +882,8 @@ function init(){
   $('#clear').addEventListener('click', () => { state.cart.clear(); saveCart(); document.querySelectorAll('.ctl[data-id]').forEach(c => { const it = byId.get(c.dataset.id); if(it) fillCtl(c, it); }); updateBar(); $('#sheet').close(); });
   ['f-name','f-bike','f-city','f-address'].forEach(id => $('#' + id).addEventListener('input', saveCustomer));
   document.querySelectorAll('input[name="pay"]').forEach(r => r.addEventListener('change', saveCustomer));
+  $('#f-win').addEventListener('change', e => { state.win = e.target.value; saveCustomer(); });
+  $('#f-date').min = new Date().toISOString().slice(0, 10);
 
   setLang(state.lang);
   renderOwner();
