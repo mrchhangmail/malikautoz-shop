@@ -14,7 +14,7 @@ window.CATALOG_CONFIG = {
   whatsapp: '923363330884',
 
   // Phone number shown to customers (tap to call). Example: '0300 1234567'. Leave '' to hide.
-  phone: '923363330884',
+  phone: '+923363330884',
 
   address: 'F-319 Satellite Town',    // add your city here too
   hours: 'Sat to Thur, 9am to 9pm',                          // example: 'Mon to Sat, 9am to 8pm'
