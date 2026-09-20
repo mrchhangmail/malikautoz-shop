@@ -1,18 +1,433 @@
 {
-  "_sample": true,
-  "updated": "2026-09-20T09:00:00Z",
-  "items": [
-    { "id": "s1",  "name": "Piston kit STD",        "models": ["Honda CD 70", "Honda CD 100"], "company": "Taiwan",  "grade": "Imported", "category": "Engine",       "code": "PK-70",  "price": 2800, "stock": 8,  "image": "" },
-    { "id": "s2",  "name": "Clutch plate set",      "models": ["Honda CD 70"],                 "company": "Genuine", "grade": "Original", "category": "Clutch",       "code": "CP-70",  "price": 1900, "stock": 3,  "image": "" },
-    { "id": "s3",  "name": "Front brake shoe",      "models": ["Honda CD 70", "Honda CD 100"], "company": "Local",   "grade": "Local",    "category": "Brakes",       "code": "BS-F70", "price": 450,  "stock": 25, "image": "" },
-    { "id": "s4",  "name": "Chain and sprocket kit","models": ["Honda CG 125"],                "company": "Taiwan",  "grade": "Imported", "category": "Transmission", "code": "CS-125", "price": 3400, "stock": 5,  "image": "" },
-    { "id": "s5",  "name": "Spark plug",            "models": ["Universal"],                   "company": "Standard","grade": "",         "category": "Electrical",   "code": "SP-01",  "price": 350,  "stock": 40, "image": "" },
-    { "id": "s6",  "name": "Air filter",            "models": ["Honda CG 125"],                "company": "Local",   "grade": "Local",    "category": "Engine",       "code": "AF-125", "price": 500,  "stock": 12, "image": "" },
-    { "id": "s7",  "name": "Handle grip pair",      "models": ["Universal"],                   "company": "Local",   "grade": "Local",    "category": "Body",         "code": "HG-01",  "price": 300,  "stock": 0,  "image": "" },
-    { "id": "s8",  "name": "Headlight assembly",    "models": ["Yamaha YBR 125"],              "company": "Local",   "grade": "Local",    "category": "Electrical",   "code": "HL-YBR", "price": 4200, "stock": 2,  "image": "" },
-    { "id": "s9",  "name": "Clutch cable",          "models": ["Suzuki GS 150"],               "company": "Genuine", "grade": "Original", "category": "Cables",       "code": "CC-GS",  "price": 380,  "stock": 15, "image": "" },
-    { "id": "s10", "name": "Front brake pad set",   "models": ["Yamaha YBR 125"],              "company": "Imported","grade": "Imported", "category": "Brakes",       "code": "BP-YBR", "price": 900,  "stock": 12, "image": "" },
-    { "id": "s11", "name": "Rear shock absorber pair","models": ["Honda CD 70"],               "company": "Local",   "grade": "Local",    "category": "Suspension",   "code": "SH-70",  "price": 3800, "stock": 4,  "image": "" },
-    { "id": "s12", "name": "Tappet cover gasket",   "models": ["Suzuki GS 150"],               "company": "Local",   "grade": "Local",    "category": "Engine",       "code": "TG-GS",  "price": 250,  "stock": 30, "image": "" }
-  ]
+ "updated": "2026-09-20T22:01:12.636Z",
+ "items": [
+  {
+   "id": "1789941452642",
+   "name": "Brake Sho (Set)",
+   "models": [],
+   "company": "JT",
+   "category": "Brakes",
+   "code": "JT-0001",
+   "price": 600,
+   "stock": 20,
+   "image": ""
+  },
+  {
+   "id": "1789941452643",
+   "name": "Chain Kit",
+   "models": [
+    "CB125F"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0002",
+   "price": 3300,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452644",
+   "name": "Chain Kit",
+   "models": [
+    "CB150F"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0003",
+   "price": 3240,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452645",
+   "name": "Chain Kit",
+   "models": [
+    "CD100"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0004",
+   "price": 2760,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452646",
+   "name": "Chain Kit Alter 15-38",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0005",
+   "price": 2340,
+   "stock": 5,
+   "image": ""
+  },
+  {
+   "id": "1789941452647",
+   "name": "Chain Kit",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0006",
+   "price": 2178,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452648",
+   "name": "Chain Kit",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0007",
+   "price": 2592,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452649",
+   "name": "Chain Kit Self",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0008",
+   "price": 3180,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452650",
+   "name": "Chain Kit",
+   "models": [
+    "DLX"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0009",
+   "price": 2700,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452651",
+   "name": "Chain Kit",
+   "models": [
+    "GD110"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0010",
+   "price": 2880,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452652",
+   "name": "Chain Kit",
+   "models": [
+    "GS150"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0011",
+   "price": 3180,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452653",
+   "name": "Chain Kit",
+   "models": [
+    "YB100"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0012",
+   "price": 2340,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452654",
+   "name": "Chain Kit",
+   "models": [
+    "YBR125"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0013",
+   "price": 3180,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452655",
+   "name": "Chain Kit",
+   "models": [
+    "YD100"
+   ],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0014",
+   "price": 2388,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452656",
+   "name": "Chain Lock 420",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0015",
+   "price": 28,
+   "stock": 20,
+   "image": ""
+  },
+  {
+   "id": "1789941452657",
+   "name": "Chain Lock 428 (H)",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0016",
+   "price": 42,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452658",
+   "name": "Chain Lock 428",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0017",
+   "price": 29,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452659",
+   "name": "Fuel Cock With Lock",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0018",
+   "price": 540,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452660",
+   "name": "Handle Lock",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Other",
+   "code": "JT-0019",
+   "price": 300,
+   "stock": 20,
+   "image": ""
+  },
+  {
+   "id": "1789941452661",
+   "name": "Key Set (3Ps)",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Other",
+   "code": "JT-0020",
+   "price": 1158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452662",
+   "name": "Key Set (3Ps)",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Other",
+   "code": "JT-0021",
+   "price": 1056,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452663",
+   "name": "Magnet O Ring Set",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0022",
+   "price": 108,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452664",
+   "name": "Magnet O Ring Set",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0023",
+   "price": 144,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452665",
+   "name": "O Ring Kit Irani",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Other",
+   "code": "JT-0024",
+   "price": 30,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452667",
+   "name": "O Ring Kit Irani",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Other",
+   "code": "JT-0025",
+   "price": 42,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452668",
+   "name": "Switch",
+   "models": [
+    "CD70F"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0026",
+   "price": 294,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452669",
+   "name": "Switch",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0027",
+   "price": 294,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452670",
+   "name": "Switch",
+   "models": [
+    "DLX"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0028",
+   "price": 900,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452671",
+   "name": "Switch Alter",
+   "models": [
+    "HERO"
+   ],
+   "company": "JT",
+   "category": "Electrical",
+   "code": "JT-0029",
+   "price": 540,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452672",
+   "name": "Tank Cap",
+   "models": [
+    "CD70"
+   ],
+   "company": "JT",
+   "category": "Body Parts",
+   "code": "JT-0030",
+   "price": 498,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452673",
+   "name": "Tank Cap",
+   "models": [
+    "CG125"
+   ],
+   "company": "JT",
+   "category": "Body Parts",
+   "code": "JT-0031",
+   "price": 612,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452674",
+   "name": "Tanki Cap (Set)",
+   "models": [
+    "DLX"
+   ],
+   "company": "JT",
+   "category": "Body Parts",
+   "code": "JT-0032",
+   "price": 840,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452675",
+   "name": "Timing Chain Kit 82L",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0033",
+   "price": 420,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789941452676",
+   "name": "Timing Chain Kit 84L",
+   "models": [],
+   "company": "JT",
+   "category": "Engine Parts",
+   "code": "JT-0034",
+   "price": 420,
+   "stock": 0,
+   "image": ""
+  }
+ ]
 }
