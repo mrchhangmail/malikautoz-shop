@@ -156,6 +156,9 @@ dialog.photo .muted{margin:0 0 10px;color:var(--ink-2);font-size:13px;font-weigh
 dialog.photo{width:min(92vw,560px);margin:auto;border-radius:12px;padding:12px;text-align:center}
 dialog.photo img{width:100%;height:auto;max-height:68vh;object-fit:contain;border-radius:8px;background:#E3E9EA;display:block}
 dialog.photo p{margin:10px 0;font-weight:700}
+.brandrow{margin-top:18px}
+.brandrow h3{margin:0 0 8px;font-size:15px;font-weight:750;color:var(--ink-2)}
+.chips.small .chip{min-height:40px;padding:0 14px;font-size:15px}
 .field select{width:100%;min-height:46px;padding:10px 12px;border:2px solid var(--ink);border-radius:8px;font:inherit;font-size:16px;background:var(--surface);color:var(--ink)}
 #recv-options .opt{align-items:center}
 </style>
@@ -187,6 +190,10 @@ dialog.photo p{margin:10px 0;font-weight:700}
   <section class="picker wrap" aria-labelledby="pick-h">
     <h2 id="pick-h" data-i18n="pickBike"></h2>
     <div id="chips" class="chips" role="group" aria-labelledby="pick-h"></div>
+    <div class="brandrow" id="brand-box" hidden>
+      <h3 id="brand-h" data-i18n="pickBrand"></h3>
+      <div id="brands" class="chips small" role="group" aria-labelledby="brand-h"></div>
+    </div>
   </section>
 
   <div class="tools">
@@ -293,7 +300,8 @@ const CONFIG = Object.assign({
   currency: 'Rs',
   lowStockAt: 3,             // show "Only N left" at or below this
   pageSize: 40,              // parts shown before "Show more"
-  maxBikeChips: 10           // bike buttons shown before "More bikes"
+  maxBikeChips: 10,          // bike buttons shown before "More bikes"
+  maxBrandChips: 8           // brand buttons shown before "More brands"
 });
 
 /* ===== Text (English + Urdu) ===== */
@@ -302,7 +310,8 @@ const I18N = {
     tagline:'Motorcycle spare parts', chat:'WhatsApp',
     pickBike:'Which bike do you ride?', allParts:'All parts', moreBikes:'More bikes', fewerBikes:'Fewer bikes',
     searchLabel:'Search parts', search:'Part name, brand or code', inStockOnly:'In stock only',
-    countAll:'{n} parts', countBike:'{n} parts for {bike}',
+    countAll:'{n} parts', countBike:'{n} parts for {bike}', countBrand:'{n} parts by {brand}', countBoth:'{n} parts for {bike} by {brand}',
+    pickBrand:'Brand', allBrands:'All brands', moreBrands:'More brands', fewerBrands:'Fewer brands',
     fits:'Fits', fitsAll:'All bikes',
     in:'In stock', low:'Only {n} left', out:'Out of stock',
     add:'Add to order', askPhoto:'Ask for photo', askPart:'Ask about this part', askStock:'Ask availability', askPrice:'Ask for price',
@@ -330,7 +339,8 @@ const I18N = {
     tagline:'موٹر سائیکل کے اسپیئر پارٹس', chat:'واٹس ایپ',
     pickBike:'آپ کون سی موٹر سائیکل چلاتے ہیں؟', allParts:'تمام پارٹس', moreBikes:'مزید ماڈلز', fewerBikes:'کم ماڈلز',
     searchLabel:'پارٹس تلاش کریں', search:'پارٹ کا نام، برانڈ یا کوڈ', inStockOnly:'صرف دستیاب پارٹس',
-    countAll:'{n} پارٹس', countBike:'{bike} کے لیے {n} پارٹس',
+    countAll:'{n} پارٹس', countBike:'{bike} کے لیے {n} پارٹس', countBrand:'{brand} کے {n} پارٹس', countBoth:'{bike} کے لیے {brand} کے {n} پارٹس',
+    pickBrand:'برانڈ', allBrands:'تمام برانڈز', moreBrands:'مزید برانڈز', fewerBrands:'کم برانڈز',
     fits:'موزوں برائے', fitsAll:'تمام موٹر سائیکلیں',
     in:'دستیاب', low:'صرف {n} باقی', out:'اسٹاک ختم',
     add:'آرڈر میں شامل کریں', askPhoto:'تصویر منگوائیں', askPart:'اس پارٹ کے بارے میں پوچھیں', askStock:'دستیابی پوچھیں', askPrice:'قیمت پوچھیں',
@@ -382,7 +392,7 @@ const LS = { cart:'malikautoz_catalog_cart_v1', cust:'malikautoz_catalog_custome
 /* ===== State ===== */
 const $ = s => document.querySelector(s);
 const state = { lang:'en', items:[], bikes:[], bike:'', q:'', inStockOnly:false, page:1,
-                showAllBikes:false, recv:'', win:'', cart:new Map(), updated:'', sample:false, loaded:false };
+                showAllBikes:false, brands:[], brand:'', showAllBrands:false, recv:'', win:'', cart:new Map(), updated:'', sample:false, loaded:false };
 let byId = new Map();
 
 function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
@@ -440,7 +450,7 @@ function normalize(r, i){
 
   return {
     id: r.id != null && r.id !== '' ? String(r.id) : 'i' + i,
-    name: String(r.name).trim(), models, universal, bikeKeys: models.map(bikeKey),
+    name: String(r.name).trim(), models, universal, bikeKeys: models.map(bikeKey), brandKey: r.company ? bikeKey(r.company) : '',
     company: r.company ? String(r.company) : '', grade: r.grade ? String(r.grade) : '', category: r.category ? String(r.category) : '',
     code: r.code ? String(r.code) : '', image: r.image ? String(r.image) : '',
     price, stock, status, maxQty, canOrder: status !== 'out' && price !== null,
@@ -456,6 +466,15 @@ function buildBikes(){
   });
   state.bikes = [...map.values()].sort((a,b) => b.count - a.count || a.label.localeCompare(b.label));
 }
+function buildBrands(){
+  const map = new Map();
+  for(const it of state.items){
+    if(!it.brandKey) continue;
+    if(!map.has(it.brandKey)) map.set(it.brandKey, { key:it.brandKey, label:it.company.trim(), count:0 });
+    map.get(it.brandKey).count++;
+  }
+  state.brands = [...map.values()].sort((a,b) => b.count - a.count || a.label.localeCompare(b.label));
+}
 async function load(){
   showState('loading');
   try{
@@ -469,8 +488,8 @@ async function load(){
     state.updated = (!Array.isArray(data) && data.updated) || '';
     state.sample = !Array.isArray(data) && !!data._sample;
     state.loaded = true;
-    buildBikes(); pruneCart();
-    hideState(); renderChips(); renderList(); renderFooter(); updateBar(); renderOwner();
+    buildBikes(); buildBrands(); pruneCart();
+    hideState(); renderChips(); renderBrands(); renderList(); renderFooter(); updateBar(); renderOwner();
   }catch(e){
     showState('error');
   }
@@ -482,6 +501,7 @@ function filtered(){
   const rank = s => s === 'out' ? 1 : 0;
   return state.items.filter(it => {
     if(state.bike && !(it.universal || it.bikeKeys.includes(state.bike))) return false;
+    if(state.brand && it.brandKey !== state.brand) return false;
     if(state.inStockOnly && it.status === 'out') return false;
     return toks.every(tk => it.hay.includes(tk) || it.compact.includes(tk.replace(/[\s\-_.]+/g,'')));
   }).sort((a,b) => rank(a.status) - rank(b.status) || a.name.localeCompare(b.name));
@@ -503,6 +523,29 @@ function renderChips(){
       onclick:() => { state.showAllBikes = !state.showAllBikes; renderChips(); const b = $('#morebikes'); if(b) b.focus(); },
       text: state.showAllBikes ? t('fewerBikes') : t('moreBikes') }));
   }
+}
+function renderBrands(){
+  const box = $('#brands'); box.replaceChildren();
+  $('#brand-box').hidden = state.brands.length < 2;            // one brand only: nothing to choose
+  if(state.brands.length < 2) return;
+  const mk = (key, label, n, plain) => h('button', { class:'chip' + (plain ? ' plain' : ''), type:'button', 'data-key':key,
+      'aria-pressed': String(state.brand === key), onclick:() => selectBrand(key) },
+      label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
+  box.append(mk('', t('allBrands'), null));
+  const shown = state.showAllBrands ? state.brands : state.brands.slice(0, CONFIG.maxBrandChips);
+  shown.forEach(b => box.append(mk(b.key, b.label, b.count)));
+  if(state.brands.length > CONFIG.maxBrandChips){
+    box.append(h('button', { id:'morebrands', class:'chip plain', type:'button',
+      onclick:() => { state.showAllBrands = !state.showAllBrands; renderBrands(); const b = $('#morebrands'); if(b) b.focus(); },
+      text: state.showAllBrands ? t('fewerBrands') : t('moreBrands') }));
+  }
+}
+function selectBrand(key){
+  state.brand = key; state.page = 1;
+  document.querySelectorAll('#brands .chip[data-key]').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.key === key)));
+  renderList();
+  const c = $('#count');
+  if(c && key) c.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start' });
 }
 function selectBike(key){
   state.bike = key; state.page = 1;
@@ -534,10 +577,6 @@ function partRow(it){
   fillCtl(ctl, it);
 
   let extra = null;
-  if(it.canOrder){
-    extra = askLink('linkbtn', t('askPhoto'), askMessage(it, 'photo'));
-    extra.setAttribute('data-ask', '1');
-  }
 
   return h('li', { class:'part', 'data-id':it.id },
     h('div', { class:'row1' },
@@ -577,10 +616,14 @@ function renderList(){
   observePhotos();
 
   const bikeLabel = state.bike ? (state.bikes.find(b => b.key === state.bike) || {}).label : '';
-  $('#count').textContent = state.loaded ? (bikeLabel ? t('countBike', { n:res.length, bike:bikeLabel }) : t('countAll', { n:res.length })) : '';
+  const brandLabel = state.brand ? (state.brands.find(b => b.key === state.brand) || {}).label : '';
+  $('#count').textContent = !state.loaded ? '' :
+    (bikeLabel && brandLabel ? t('countBoth', { n:res.length, bike:bikeLabel, brand:brandLabel }) :
+     bikeLabel ? t('countBike', { n:res.length, bike:bikeLabel }) :
+     brandLabel ? t('countBrand', { n:res.length, brand:brandLabel }) : t('countAll', { n:res.length }));
 
   if(state.loaded && !res.length){
-    const q = state.q || bikeLabel || '';
+    const q = state.q || [bikeLabel, brandLabel].filter(Boolean).join(' ') || '';
     showState('empty', q);
   } else if(state.loaded) hideState();
 
@@ -626,8 +669,6 @@ function showPhoto(row, it, src){
   const btn = h('button', { class:'thumbbtn', type:'button', 'aria-label':t('viewPhoto', { name:it.name }),
                             onclick:() => openPhoto(src, it.name) }, img);
   r1.insertBefore(btn, r1.firstChild);
-  const ask = row.querySelector('[data-ask]');
-  if(ask){ ask.textContent = t('askPart'); ask.setAttribute('href', waLink(askMessage(it, 'ask'))); }
 }
 function showArt(row, it){
   if(CONFIG.showIllustrations === false || !window.PartArt) return;
@@ -873,7 +914,7 @@ function setLang(l){
   applyStatic();
   renderContact();
   renderRecv();
-  if(state.loaded){ renderChips(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
+  if(state.loaded){ renderChips(); renderBrands(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
   else if($('#state').dataset.kind) showState($('#state').dataset.kind);
   updateBar();
 }
