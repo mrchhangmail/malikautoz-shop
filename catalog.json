@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-20T22:01:12.636Z",
+ "updated": "2026-09-21T00:00:20.836Z",
  "items": [
   {
    "id": "1789941452642",
@@ -426,6 +426,7715 @@
    "category": "Engine Parts",
    "code": "JT-0034",
    "price": 420,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791695",
+   "name": "AIR FILTER",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0103-K0",
+   "price": 102,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791696",
+   "name": "AIR FILTER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0103-K0",
+   "price": 78,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791697",
+   "name": "AIR FILTER BOTTLE (HOSE PIPE) 16MM",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0107-K0",
+   "price": 140,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791698",
+   "name": "AIR FILTER FOAM",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0103-K0",
+   "price": 522,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791699",
+   "name": "AIR LOTA",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0106-K0",
+   "price": 156,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791700",
+   "name": "AIR LOTA",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0106-K0",
+   "price": 162,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791701",
+   "name": "AXLE CENTER WITH NUT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "18-0106-01",
+   "price": 142,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791702",
+   "name": "AXLE FRONT WITH NUT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "18-0106-00",
+   "price": 133,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791703",
+   "name": "AXLE REAR WITH NUT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "18-0106-02",
+   "price": 192,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791704",
+   "name": "BACK LIGHT COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "07-0212-K0",
+   "price": 450,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791705",
+   "name": "BACK LIGHT COMPLETE (2003 MODEL)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0212-K0",
+   "price": 342,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791706",
+   "name": "BACK LIGHT HOLDER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0213-K0",
+   "price": 60,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791707",
+   "name": "BACK LIGHT LENS",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "07-0215-K0",
+   "price": 190,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791708",
+   "name": "BACK TAKE (CHROME)",
+   "models": [
+    "CD70 EURO-2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0235-K9",
+   "price": 972,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791709",
+   "name": "BACK VIEW MIRROR (BALL FUNCTION) SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0241-K0",
+   "price": 468,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791710",
+   "name": "BALANCER",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0204-00",
+   "price": 246,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791711",
+   "name": "BATTERY DRY CELL",
+   "models": [
+    "12V 2.5 AH"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "00-0217-25",
+   "price": 2160,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791712",
+   "name": "BATTERY DRY CELL",
+   "models": [
+    "12V 5 AH"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "00-0217-05",
+   "price": 2904,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791713",
+   "name": "BEARING 6000",
+   "models": [
+    "6000 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6000-00",
+   "price": 82,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791714",
+   "name": "BEARING 6001",
+   "models": [
+    "6001 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6001-00",
+   "price": 85,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791715",
+   "name": "BEARING 6202",
+   "models": [
+    "6202 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6202-00",
+   "price": 116,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791716",
+   "name": "BEARING 6203",
+   "models": [
+    "6203 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6203-00",
+   "price": 142,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791717",
+   "name": "BEARING 6205",
+   "models": [
+    "6205 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6205-00",
+   "price": 234,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791718",
+   "name": "BEARING 6300",
+   "models": [
+    "6300 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6300-00",
+   "price": 120,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791719",
+   "name": "BEARING 6301",
+   "models": [
+    "6301 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6301-00",
+   "price": 128,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791720",
+   "name": "BEARING 6302",
+   "models": [
+    "6302 2RS"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6302-00",
+   "price": 158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791721",
+   "name": "BEARING 6304 A (CJB)",
+   "models": [
+    "6304"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6304-01",
+   "price": 324,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791722",
+   "name": "BEARING 6328 A (CJB)",
+   "models": [
+    "6328"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-6328-01",
+   "price": 1302,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791723",
+   "name": "BRAKE CABLE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "18-0210-01",
+   "price": 228,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791724",
+   "name": "BRAKE CABLE (6MM)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-0210-01",
+   "price": 238,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791725",
+   "name": "BRAKE CABLE (JAPANESE STYLE)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "18-0210-00",
+   "price": 256,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791726",
+   "name": "BRAKE CABLE 2007 MODEL",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "17-0210-00",
+   "price": 260,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791727",
+   "name": "BRAKE CABLE 2010 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-0210-00",
+   "price": 274,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791728",
+   "name": "BRAKE CABLE 2012 MODEL",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "42-0210-00",
+   "price": 286,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791729",
+   "name": "BRAKE CAM LEVER & SHAFT FRONT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0209-00",
+   "price": 164,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791731",
+   "name": "BRAKE CAM LEVER & SHAFT REAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0208-00",
+   "price": 181,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791732",
+   "name": "BRAKE PEDAL",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0231-K3",
+   "price": 438,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791733",
+   "name": "BRAKE PEDAL",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "07-0231-K3",
+   "price": 502,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791734",
+   "name": "BRAKE PEDAL SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0207-00",
+   "price": 30,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791735",
+   "name": "BRAKE ROD",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "18-0217-K0",
+   "price": 150,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791736",
+   "name": "BRAKE SHOE PLATE ONLY FRONT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0205-00",
+   "price": 936,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791737",
+   "name": "BRAKE SHOE PLATE ONLY REAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0206-00",
+   "price": 936,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791738",
+   "name": "BRAKE SHOE SET FRONT W/SPRING",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "14-0211-00",
+   "price": 576,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791739",
+   "name": "BRAKE SHOE SET WITH BIG SPRING NON-ASBESTOS",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-0211-06",
+   "price": 382,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791740",
+   "name": "BRAKE SHOE SET WITH SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0211-00",
+   "price": 396,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791741",
+   "name": "BRAKE SHOE SET WITH SPRING",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "13-0211-00",
+   "price": 402,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791742",
+   "name": "BRAKE SHOE SET WITH SPRING EXTRA GRIP",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "04-0211-01",
+   "price": 408,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791743",
+   "name": "BRAKE SWITCH FRONT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0213-00",
+   "price": 65,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791744",
+   "name": "BRAKE SWITCH REAR W/SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0227-00",
+   "price": 73,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791745",
+   "name": "C.D.I UNIT LEED",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0303-K1",
+   "price": 43,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791746",
+   "name": "C.D.I UNIT LEED (MB100)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-0303-K1",
+   "price": 42,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791747",
+   "name": "C.D.I. STARTING COIL (GUTKA COIL)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0310-00",
+   "price": 415,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791748",
+   "name": "C.D.I. STARTING COIL (GUTKA COIL)",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-0310-00",
+   "price": 413,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791749",
+   "name": "C.D.I. STARTING COIL (GUTKA COIL) HEAVY DUTY COMMON WITH CD70-CDI",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-0310-HD",
+   "price": 462,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791750",
+   "name": "C.D.I. UNIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0303-00",
+   "price": 412,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791751",
+   "name": "C.D.I. UNIT",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-0303-00",
+   "price": 446,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791752",
+   "name": "C.D.I. UNIT (ELECTRIC START)(4 PIN)",
+   "models": [
+    "LF70"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "21-0303-00",
+   "price": 744,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791753",
+   "name": "C.D.I. UNIT (MB100)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-0303-00",
+   "price": 209,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791754",
+   "name": "C.D.I. UNIT (MB100)  (PREMIUM QUALITY)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-0303-HD",
+   "price": 390,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791755",
+   "name": "CAM FOLLOWER",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0328-00",
+   "price": 486,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791756",
+   "name": "CAM FOLLOWER",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0328-00",
+   "price": 568,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791757",
+   "name": "CAM GEAR SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0308-00",
+   "price": 1734,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791758",
+   "name": "CAM GEAR SET (EURO II)",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0308-00",
+   "price": 1746,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791759",
+   "name": "CAM GEAR SET HEAVY DUTY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0308-01",
+   "price": 2340,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791760",
+   "name": "CAM PIN ROCKER ORING",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0312-00",
+   "price": 37,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791761",
+   "name": "CAM SHAFT",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-0326-00",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791762",
+   "name": "CAM SHAFT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0326-00",
+   "price": 708,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791763",
+   "name": "CAM SHAFT",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-0326-00",
+   "price": 738,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791764",
+   "name": "CAM SHAFT (2012 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0326-00",
+   "price": 1056,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791765",
+   "name": "CAM SHAFT (ALTER)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0326-00",
+   "price": 810,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791766",
+   "name": "CARBURETOR (PZ-16) 72CC",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0322-00",
+   "price": 2640,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791767",
+   "name": "CARBURETOR (PZ-16) 78CC",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0322-00",
+   "price": 2640,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791768",
+   "name": "CARBURETOR (PZ-18)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0322-00",
+   "price": 2904,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791769",
+   "name": "CARBURETOR (PZ-22)",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0322-00",
+   "price": 2820,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791770",
+   "name": "CARBURETOR (PZ-26 SD)",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0322-00",
+   "price": 4224,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791771",
+   "name": "CARBURETOR (PZ-26)",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0322-00",
+   "price": 3036,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791772",
+   "name": "CARBURETOR BEND (BIG HOLE)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0356-00",
+   "price": 372,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791773",
+   "name": "CARBURETOR BEND (EURO 11)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0356-00",
+   "price": 372,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791774",
+   "name": "CARBURETOR BEND (SMALL HOLE)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0356-01",
+   "price": 372,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791775",
+   "name": "CARBURETOR CHOKE KIT",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0301-00",
+   "price": 70,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791776",
+   "name": "CARBURETOR CHOKE KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0301-00",
+   "price": 206,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791777",
+   "name": "CARBURETOR CHOKE KIT COMPLETE",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0301-01",
+   "price": 212,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791778",
+   "name": "CARBURETOR CHOKE KIT COMPLETE",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0301-01",
+   "price": 200,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791779",
+   "name": "CARBURETOR PISTON W/SPRING",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0351-00",
+   "price": 130,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791780",
+   "name": "CARBURETOR PISTON W/SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0351-00",
+   "price": 144,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791781",
+   "name": "CARBURETOR PISTON W/SPRING",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0351-00",
+   "price": 168,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791782",
+   "name": "CARBURETOR PISTON W/SPRING",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0351-00",
+   "price": 211,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791783",
+   "name": "CHAIN COVER BOLT KIT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0371-K1",
+   "price": 40,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791784",
+   "name": "CHAIN COVER SET (SILVER)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0370-K5",
+   "price": 1068,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791785",
+   "name": "CHAIN COVER SET (SILVER)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0370-K5",
+   "price": 1188,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791786",
+   "name": "CHAIN KIT (38X15+420X104L) MODIFIED",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0314-02",
+   "price": 1980,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791787",
+   "name": "CHAIN KIT (38X15+428X100L)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0314-00",
+   "price": 2292,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791788",
+   "name": "CHAIN KIT (38X15+428X102L)",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0314-00",
+   "price": 2508,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791789",
+   "name": "CHAIN KIT (38X15+428X102L) 3WHEELER",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0314-3W",
+   "price": 2508,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791790",
+   "name": "CHAIN KIT (41X14+420X104L) JAPANESE STYLE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0314-01",
+   "price": 1896,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791791",
+   "name": "CHAIN KIT (43X14+428HX110L)",
+   "models": [
+    "CG125-DLX"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "25-0314-00",
+   "price": 2460,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791792",
+   "name": "CHAIN KIT (43X14+428X108L)",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-0314-00",
+   "price": 2292,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791793",
+   "name": "CHAIN LOCK 420",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-0317-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791794",
+   "name": "CHAIN LOCK 420H (HEAVY DUTY)",
+   "models": [
+    "420H"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-0317-0H",
+   "price": 26,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791795",
+   "name": "CHAIN LOCK 428",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-0317-01",
+   "price": 26,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791796",
+   "name": "CHAIN LOCK 428H (HEAVY DUTY)",
+   "models": [
+    "428H"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-0317-8H",
+   "price": 29,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791798",
+   "name": "CHAIN SETTING LARGE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0371-K2",
+   "price": 43,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791799",
+   "name": "CHAIN SETTING SMALL",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0371-K3",
+   "price": 42,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791800",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-0324-00",
+   "price": 732,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791801",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0324-00",
+   "price": 498,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791802",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0324-00",
+   "price": 636,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791803",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0324-00",
+   "price": 672,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791804",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0324-00",
+   "price": 564,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791805",
+   "name": "CLUTCH BOSS",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0324-00",
+   "price": 564,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791806",
+   "name": "CLUTCH BOSS SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0342-00",
+   "price": 84,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791807",
+   "name": "CLUTCH BOSS SPRING",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0342-00",
+   "price": 121,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791808",
+   "name": "CLUTCH BOX ASSY. COMP",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0304-00",
+   "price": 3048,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791809",
+   "name": "CLUTCH BOX ASSY. COMP",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0304-00",
+   "price": 3108,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791810",
+   "name": "CLUTCH BOX ASSY. COMP. W/GEAR",
+   "models": [
+    "C50Z2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "06-0304-00",
+   "price": 4164,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791811",
+   "name": "CLUTCH BOX ASSY. COMP. W/GEAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0304-00",
+   "price": 2742,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791812",
+   "name": "CLUTCH BOX ASSY. COMP. W/GEAR",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0304-00",
+   "price": 4128,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791813",
+   "name": "CLUTCH BOX W/GEAR",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0304-01",
+   "price": 2424,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791814",
+   "name": "CLUTCH BUSH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0355-00",
+   "price": 77,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791815",
+   "name": "CLUTCH BUSH",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0355-00",
+   "price": 113,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791816",
+   "name": "CLUTCH CABLE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0315-00",
+   "price": 186,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791817",
+   "name": "CLUTCH CABLE",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0315-00",
+   "price": 212,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791818",
+   "name": "CLUTCH CABLE 2010 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0315-01",
+   "price": 197,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791819",
+   "name": "CLUTCH CABLE 2012 MODEL",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0315-00",
+   "price": 229,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791820",
+   "name": "CLUTCH CENTER KARA",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0349-00",
+   "price": 282,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791821",
+   "name": "CLUTCH CENTER KARA",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0349-00",
+   "price": 270,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791822",
+   "name": "CLUTCH COVER",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0358-00",
+   "price": 3396,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791823",
+   "name": "CLUTCH GEAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0337-00",
+   "price": 324,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791824",
+   "name": "CLUTCH GEAR",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0337-00",
+   "price": 486,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791825",
+   "name": "CLUTCH GEAR",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0337-00",
+   "price": 329,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791826",
+   "name": "CLUTCH GEAR 20T",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0337-00",
+   "price": 480,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791827",
+   "name": "CLUTCH GEAR 65T",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0337-01",
+   "price": 1416,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791828",
+   "name": "CLUTCH GEAR BIG 67T",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0337-01",
+   "price": 1158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791829",
+   "name": "CLUTCH GEAR HEAVY DUTY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0337-HD",
+   "price": 486,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791830",
+   "name": "CLUTCH HOUSING ASSEMBLY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0335-01",
+   "price": 2064,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791832",
+   "name": "CLUTCH HOUSING SET",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-0335-00",
+   "price": 1122,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791833",
+   "name": "CLUTCH HOUSING SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0335-00",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791834",
+   "name": "CLUTCH HOUSING SET W/STEEL (DOTTED)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0335-11",
+   "price": 1272,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791835",
+   "name": "CLUTCH LIFTER (CROME)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0319-00",
+   "price": 240,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791836",
+   "name": "CLUTCH LIFTER (CROME)",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0319-00",
+   "price": 264,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791837",
+   "name": "CLUTCH LIFTER (CROME) (QINGQI-4ST)",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0319-00",
+   "price": 258,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791838",
+   "name": "CLUTCH LIFTER OVER SIZE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0319-01",
+   "price": 192,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791839",
+   "name": "CLUTCH LIFTER SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0352-00",
+   "price": 12,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791840",
+   "name": "CLUTCH NUT LOCK SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0306-00",
+   "price": 54,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791841",
+   "name": "CLUTCH NUT LOCK WITH OUTSIDE WASHER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0306-01",
+   "price": 64,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791842",
+   "name": "CLUTCH OUTER COVER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0343-00",
+   "price": 144,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791843",
+   "name": "CLUTCH PACKING (GREEN)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0354-00",
+   "price": 62,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791844",
+   "name": "CLUTCH PACKING (GREEN)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0354-00",
+   "price": 72,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791845",
+   "name": "CLUTCH PATTI SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0338-00",
+   "price": 56,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791846",
+   "name": "CLUTCH PLATE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0302-00",
+   "price": 196,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791847",
+   "name": "CLUTCH PLATE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0302-00",
+   "price": 444,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791848",
+   "name": "CLUTCH PLATE",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0302-00",
+   "price": 317,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791849",
+   "name": "CLUTCH PLATE",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0302-00",
+   "price": 328,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791850",
+   "name": "CLUTCH PLATE (PAPER TYPE)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0302-01",
+   "price": 434,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791851",
+   "name": "CLUTCH PLATE (PAPER TYPE)",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0302-01",
+   "price": 834,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791852",
+   "name": "CLUTCH PUSHER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0362-00",
+   "price": 54,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791853",
+   "name": "CLUTCH WIRE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0344-00",
+   "price": 55,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791854",
+   "name": "CONNECTING ROD KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0320-00",
+   "price": 960,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791855",
+   "name": "CONNECTING ROD KIT",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0320-00",
+   "price": 1554,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791856",
+   "name": "CONNECTING ROD KIT",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0320-00",
+   "price": 984,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791857",
+   "name": "CONNECTING ROD KIT",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-0320-00",
+   "price": 960,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791858",
+   "name": "CONNECTING ROD KIT",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0320-00",
+   "price": 960,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791859",
+   "name": "COUNTER SHAFT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0329-00",
+   "price": 409,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791860",
+   "name": "COUNTER SHAFT",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0329-00",
+   "price": 404,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791861",
+   "name": "CRANK SHAFT COMP. W/BEARING",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0321-00",
+   "price": 4692,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791862",
+   "name": "CRANK SHAFT COMP. W/BEARING",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0321-00",
+   "price": 4692,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791863",
+   "name": "CRANK SHAFT COMP. W/BEARING",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0321-00",
+   "price": 4692,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791864",
+   "name": "CUSHION RUBBER SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0305-00",
+   "price": 101,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791865",
+   "name": "CUSHION RUBBER SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0305-00",
+   "price": 112,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791866",
+   "name": "CUSHION SET FRONT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0313-00",
+   "price": 6360,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791867",
+   "name": "CUSHION SET FRONT",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0313-00",
+   "price": 7200,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791868",
+   "name": "CUSHION SET FRONT",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "19-0313-00",
+   "price": 6900,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791869",
+   "name": "CYLINDER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0325-00",
+   "price": 2670,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791870",
+   "name": "CYLINDER",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0325-00",
+   "price": 3150,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791871",
+   "name": "CYLINDER 100CC",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0325-00",
+   "price": 3180,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791872",
+   "name": "CYLINDER 69mm",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0325-00",
+   "price": 3150,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791873",
+   "name": "CYLINDER 78CC",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0325-00",
+   "price": 2652,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791874",
+   "name": "CYLINDER 78CC (ALUMINIUM)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0325-02",
+   "price": 3120,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791875",
+   "name": "CYLINDER PACKING (GREEN)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0348-00",
+   "price": 20,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791876",
+   "name": "CYLINDER PACKING (GREEN)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0348-00",
+   "price": 19,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791877",
+   "name": "D RUBBER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0402-00",
+   "price": 12,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791878",
+   "name": "DOWEL PIN SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0404-00",
+   "price": 52,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791880",
+   "name": "DOWEL PIN SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0404-00",
+   "price": 60,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791881",
+   "name": "DRIVE PLATE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0403-00",
+   "price": 1002,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791882",
+   "name": "DRUM BUSH SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "07-0405-00",
+   "price": 205,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791883",
+   "name": "DRUM RUBBER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "04-0401-00",
+   "price": 92,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791884",
+   "name": "ENGINE FOUNDATION LOWER WITH NUT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0503-00",
+   "price": 34,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791885",
+   "name": "ENGINE FOUNDATION UPPER WITH NUT",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0503-01",
+   "price": 34,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791886",
+   "name": "ENGINE OIL (1000 ML) ULTRA BOOST (20W-50)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Oils & Lubricants",
+   "code": "07-1511-K2",
+   "price": 13566,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791887",
+   "name": "ENGINE OIL (700 ML) ULTRA BOOST (20W-50)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Oils & Lubricants",
+   "code": "04-1511-K1",
+   "price": 10098,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791888",
+   "name": "ENGINE OIL (800 ML) ULTRA BOOST (20W-50)",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Oils & Lubricants",
+   "code": "14-1511-K2",
+   "price": 11154,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791889",
+   "name": "ENGINE PIECE LEFT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0504-01",
+   "price": 4560,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791890",
+   "name": "ENGINE PIECE RIGHT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0504-00",
+   "price": 3900,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791891",
+   "name": "FENDER FRONT (BLACK)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0630-S2",
+   "price": 1482,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791892",
+   "name": "FENDER FRONT (CHROME)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0630-S3",
+   "price": 1980,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791893",
+   "name": "FENDER REAR (BLACK)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0623-S2",
+   "price": 1758,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791894",
+   "name": "FENDER REAR (CHROME)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0623-S3",
+   "price": 2064,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791895",
+   "name": "FINGER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "04-0622-00",
+   "price": 306,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791896",
+   "name": "FLOAT BALL W/PIN",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0602-00",
+   "price": 90,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791897",
+   "name": "FLOAT BALL W/PIN",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0602-00",
+   "price": 252,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791898",
+   "name": "FLOAT BALL W/PIN",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0602-00",
+   "price": 62,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791899",
+   "name": "FLOAT BALL W/PIN WITH STEEL CLIP",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0602-SC",
+   "price": 100,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791900",
+   "name": "FLOAT PIN (NEEDLE VALVE)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0603-00",
+   "price": 70,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791901",
+   "name": "FLOAT PIN (NEEDLE VALVE)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0603-00",
+   "price": 70,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791902",
+   "name": "FLOAT PIN (NEEDLE VALVE)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0603-00",
+   "price": 77,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791903",
+   "name": "FOOT REST BAR",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0624-K0",
+   "price": 588,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791904",
+   "name": "FOOT REST BAR WITH SIDE STAND",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0618-K0",
+   "price": 996,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791905",
+   "name": "FOOT REST REAR (SET)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0601-K0",
+   "price": 322,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791906",
+   "name": "FOOT REST REAR (SET)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0601-K0",
+   "price": 338,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791907",
+   "name": "FOOT REST RUBBER (SET)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0625-K0",
+   "price": 106,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791908",
+   "name": "FOOT REST RUBBER (SET)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0625-K0",
+   "price": 89,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791909",
+   "name": "FORK BUSH (CHIMTA BUSH)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0616-00",
+   "price": 179,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791910",
+   "name": "FORK BUSH (CHIMTA BUSH)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0616-00",
+   "price": 186,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791911",
+   "name": "FRONT SHOCK BOTTOM SET ( BOTTLE)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0611-K0",
+   "price": 1758,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791912",
+   "name": "FRONT SHOCK BOTTOM SET ( BOTTLE)",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-0611-K0",
+   "price": 2022,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791913",
+   "name": "FRONT SHOCK GLASS BIG CHROME SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0606-K3",
+   "price": 474,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791914",
+   "name": "FRONT SHOCK GLASS BIG CHROME SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0606-K3",
+   "price": 438,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791915",
+   "name": "FRONT SHOCK GLASS BIG CHROME SET",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-0606-K3",
+   "price": 438,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791916",
+   "name": "FRONT SHOCK GLASS SMALL CHROME SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0608-K3",
+   "price": 210,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791917",
+   "name": "FRONT SHOCK GLASS SMALL CHROME SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0608-K3",
+   "price": 228,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791918",
+   "name": "FRONT SHOCK GLASS SMALL CHROME SET",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-0608-K3",
+   "price": 214,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791919",
+   "name": "FRONT SHOCK KAAN BLACK SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0606-K2",
+   "price": 402,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791920",
+   "name": "FRONT SHOCK KAAN BLACK SET",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0606-K2",
+   "price": 402,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791922",
+   "name": "FRONT SHOCK KAAN RED SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0606-K1",
+   "price": 426,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791923",
+   "name": "FRONT SHOCK KAAN RED SET",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-0606-K1",
+   "price": 426,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791924",
+   "name": "FRONT SHOCK ROD (INNER TUBE)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0910-S1",
+   "price": 1950,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791925",
+   "name": "FRONT SHOCK ROD (INNER TUBE)",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-0910-S1",
+   "price": 2039,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791926",
+   "name": "FRONT SHOCK SPRING BIG SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0615-K0",
+   "price": 402,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791927",
+   "name": "FRONT SHOCK SPRING SET",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-0615-K0",
+   "price": 599,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791928",
+   "name": "FRONT SPROCKET 14T",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1925-00",
+   "price": 176,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791929",
+   "name": "FUEL COCK",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0605-00",
+   "price": 307,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791930",
+   "name": "FUEL COCK (CD70C)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0605-00",
+   "price": 324,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791931",
+   "name": "FUEL COCK WITH LOCK",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0605-01",
+   "price": 630,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791932",
+   "name": "FUEL FILTER",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-0607-00",
+   "price": 71,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791933",
+   "name": "FUEL TANK CAP",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0609-00",
+   "price": 625,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791934",
+   "name": "FUEL TANK CAP",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "17-0609-00",
+   "price": 709,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791935",
+   "name": "GASKET CLUTCH BOSS",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0711-01",
+   "price": 10,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791936",
+   "name": "GASKET ENGINE PIECE GREEN",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0711-03",
+   "price": 67,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791937",
+   "name": "GASKET FULL (GREEN)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0704-00",
+   "price": 360,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791938",
+   "name": "GASKET FULL (GREEN)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0704-00",
+   "price": 366,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791939",
+   "name": "GASKET FULL (GREEN)",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0704-00",
+   "price": 384,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791940",
+   "name": "GASKET HALF (GREEN)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0704-01",
+   "price": 180,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791941",
+   "name": "GASKET HALF (GREEN)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0704-01",
+   "price": 204,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791942",
+   "name": "GASKET HALF (GREEN)",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0704-01",
+   "price": 234,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791943",
+   "name": "GASKET TIMING COVER GREEN",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0711-02",
+   "price": 12,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791944",
+   "name": "GASKET TOP COVER GREEN",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0711-04",
+   "price": 12,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791945",
+   "name": "GEAR 23421",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-21",
+   "price": 360,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791946",
+   "name": "GEAR 23431",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-31",
+   "price": 210,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791947",
+   "name": "GEAR 23441",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-41",
+   "price": 360,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791948",
+   "name": "GEAR 23451",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-51",
+   "price": 307,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791949",
+   "name": "GEAR 23461 2 LEGS",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-61",
+   "price": 307,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791951",
+   "name": "GEAR 23461 4 LEGS",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0707-61",
+   "price": 319,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791952",
+   "name": "GEAR 23471",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-71",
+   "price": 222,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791953",
+   "name": "GEAR 23481",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0707-81",
+   "price": 222,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791954",
+   "name": "GEAR BEARING 13.5x12",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0725-13",
+   "price": 61,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791955",
+   "name": "GEAR BEARING 13.5x12",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0725-13",
+   "price": 127,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791956",
+   "name": "GEAR BEARING 14x12",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0725-14",
+   "price": 61,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791957",
+   "name": "GEAR BEARING 14x12",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0725-14",
+   "price": 127,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791958",
+   "name": "GEAR CENTER PIECE 67T",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0712-00",
+   "price": 288,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791959",
+   "name": "GEAR DRUM COMPLETE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0703-01",
+   "price": 1392,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791960",
+   "name": "GEAR DRUM COMPLETE",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "23-0703-01",
+   "price": 1296,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791961",
+   "name": "GEAR DRUM WASHER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0706-00",
+   "price": 20,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791962",
+   "name": "GEAR INDICATOR INNER SWITCH",
+   "models": [
+    "LF70"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "21-0708-00",
+   "price": 179,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791963",
+   "name": "GEAR LEVER",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "18-0702-00",
+   "price": 294,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791964",
+   "name": "GEAR LEVER",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "17-0702-00",
+   "price": 330,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791965",
+   "name": "GEAR LEVER (CHROME)",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "50-0702-00",
+   "price": 354,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791966",
+   "name": "GEAR LEVER (HONDA TYPE)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-0702-00",
+   "price": 276,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791967",
+   "name": "GEAR SHAFT COMPLETE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0701-00",
+   "price": 498,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791968",
+   "name": "GEAR SHAFT COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0701-00",
+   "price": 529,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791969",
+   "name": "GEAR SHAFT COMPLETE",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-0701-00",
+   "price": 608,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791970",
+   "name": "GEAR SHAFT SPRING (SMALL)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0728-01",
+   "price": 10,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791971",
+   "name": "GEAR STAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0717-00",
+   "price": 58,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791972",
+   "name": "GEAR WASHER KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0730-00",
+   "price": 70,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791973",
+   "name": "GEAR WASHER KIT",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0730-00",
+   "price": 98,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791974",
+   "name": "H/L BULB 12V 25X25W",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0819-25",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791975",
+   "name": "H/L BULB 12V 35X35W",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0819-35",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791976",
+   "name": "HANDLE BAR WITH BALANCER",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0830-K3",
+   "price": 1236,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791977",
+   "name": "HANDLE CONE SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0813-00",
+   "price": 307,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791979",
+   "name": "HANDLE CONE SET (ROLLER BEARING TYPE)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0813-02",
+   "price": 392,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791980",
+   "name": "HANDLE GOLI SET (NYLON)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0813-01",
+   "price": 46,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791981",
+   "name": "HANDLE GRIP SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-0810-K0",
+   "price": 109,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791982",
+   "name": "HANDLE HOLDER SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0824-00",
+   "price": 582,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791983",
+   "name": "HANDLE LOCK",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0816-00",
+   "price": 288,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791984",
+   "name": "HANDLE NUT (CROME)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0814-00",
+   "price": 94,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791985",
+   "name": "HANDLE T BRIDGE PLATE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0809-00",
+   "price": 810,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791986",
+   "name": "HANDLE T ONLY",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0823-00",
+   "price": 1260,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791987",
+   "name": "HANDLE T ONLY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-0823-00",
+   "price": 1260,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791988",
+   "name": "HEAD COMPLETE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-0803-00",
+   "price": 8520,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791989",
+   "name": "HEAD COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0803-00",
+   "price": 10680,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791990",
+   "name": "HEAD COMPLETE",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-0803-00",
+   "price": 7440,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791991",
+   "name": "HEAD COMPLETE 2012 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-0803-00",
+   "price": 7440,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791992",
+   "name": "HEAD GASKET (RED LINING)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0804-00",
+   "price": 76,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791993",
+   "name": "HEAD GASKET (RED LINING)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-0804-00",
+   "price": 67,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791994",
+   "name": "HEAD GASKET (RED LINING)",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-0804-00",
+   "price": 82,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791995",
+   "name": "HEAD LIGHT CASE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0815-K0",
+   "price": 90,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791996",
+   "name": "HEAD LIGHT CASE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "07-0815-K0",
+   "price": 90,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791997",
+   "name": "HEAD LIGHT COMPLETE WITH FIT BULB",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0801-K0",
+   "price": 672,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948791999",
+   "name": "HEAD LIGHT HOLDER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0808-00",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792000",
+   "name": "HEAD LIGHT LENS (STAINLEY)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0806-K0",
+   "price": 86,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792001",
+   "name": "HEAD LIGHT ONLY WITH FIT BULB (WITHOUT CASE)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0802-K0",
+   "price": 594,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792002",
+   "name": "HEAD LIGHT REFLECTOR",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0816-K0",
+   "price": 133,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792003",
+   "name": "HEAD LIGHT RIM CHROME",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0811-K3",
+   "price": 257,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792004",
+   "name": "HOCKEY PATTI",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-0805-00",
+   "price": 61,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792005",
+   "name": "HOCKEY PATTI",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "20-0805-00",
+   "price": 42,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792006",
+   "name": "HORN CROME 12V H-DUTY 100% COPPER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0802-02",
+   "price": 311,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792007",
+   "name": "IGNITION COIL 12V",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-0901-00",
+   "price": 522,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792008",
+   "name": "IGNITION COIL 12V",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0901-00",
+   "price": 516,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792009",
+   "name": "IGNITION COIL 12V",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-0901-00",
+   "price": 552,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792010",
+   "name": "INDICATOR (2003)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-0920-K0",
+   "price": 227,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792011",
+   "name": "INDICATOR (SPECIAL)",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "00-0920-K9",
+   "price": 215,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792012",
+   "name": "INDICATOR ASSY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "07-0920-K0",
+   "price": 246,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792013",
+   "name": "INDICATOR FRONT LEFT",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-0920-K0",
+   "price": 227,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792014",
+   "name": "INDICATOR FRONT RIGHT",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-0919-K0",
+   "price": 227,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792015",
+   "name": "INDICATOR RUBBER",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-0922-K0",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792016",
+   "name": "INDICATOR RUBBER",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-0922-K0",
+   "price": 53,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792017",
+   "name": "INSULATOR",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-0902-00",
+   "price": 298,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792018",
+   "name": "INSULATOR (HONDA TYPE)",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-0902-01",
+   "price": 391,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792019",
+   "name": "INSULATOR WITH ORING",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-0902-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792020",
+   "name": "JUMP RIB FRONT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "04-1001-00",
+   "price": 88,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792021",
+   "name": "JUMP RIB FRONT",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "07-1001-00",
+   "price": 143,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792022",
+   "name": "KEY SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "04-1104-00",
+   "price": 1200,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792023",
+   "name": "KEY SET",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "17-1104-00",
+   "price": 1314,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792024",
+   "name": "KICK",
+   "models": [
+    "C100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "40-1102-00",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792025",
+   "name": "KICK",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-1102-00",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792026",
+   "name": "KICK",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-1102-00",
+   "price": 554,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792027",
+   "name": "KICK",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1102-00",
+   "price": 493,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792028",
+   "name": "KICK",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-1102-00",
+   "price": 977,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792029",
+   "name": "KICK SHAFT COMPLETE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1101-01",
+   "price": 1128,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792030",
+   "name": "KICK SHAFT COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1101-01",
+   "price": 1764,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792031",
+   "name": "KICK SHAFT COMPLETE",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1101-01",
+   "price": 1152,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792032",
+   "name": "KICK SHAFT ONLY",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1101-00",
+   "price": 510,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792033",
+   "name": "KICK SHAFT ONLY",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1101-00",
+   "price": 517,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792034",
+   "name": "KICK SHAFT ONLY",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1101-00",
+   "price": 593,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792035",
+   "name": "KICK SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1103-00",
+   "price": 84,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792036",
+   "name": "KICK SPRING",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1103-00",
+   "price": 92,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792037",
+   "name": "LEVER ASSEMBLY SET BLACK (2010 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1202-00",
+   "price": 1200,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792038",
+   "name": "LEVER ASSEMBLY SET BLACK 2012 MODEL",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "42-1202-03",
+   "price": 1284,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792039",
+   "name": "LEVER ASSY HALF LEFT ONLY BLACK (2010 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1202-13",
+   "price": 516,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792041",
+   "name": "LEVER ASSY HALF LEFT ONLY BLACK (2012 MODEL)",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "42-1202-13",
+   "price": 540,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792042",
+   "name": "LEVER ASSY. LEFT ONLY BLACK (2010 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1202-11",
+   "price": 864,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792043",
+   "name": "LEVER ASSY. LEFT ONLY 'BLACK' 2012 MODEL",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "42-1202-11",
+   "price": 924,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792044",
+   "name": "LEVER BRAKE (R) BLACK",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1204-K2",
+   "price": 158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792045",
+   "name": "LEVER CLUTCH (L) BLACK",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1205-K2",
+   "price": 158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792046",
+   "name": "LEVER HOLDER BRAKE WITH SCREW 2010 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1204-01",
+   "price": 160,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792047",
+   "name": "LEVER HOLDER LEFT LOWER 2010 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1203-01",
+   "price": 162,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792048",
+   "name": "LEVER HOLDER RIGHT 2010 MODEL (THROTTLE HOLDER ONLY)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Brakes",
+   "code": "36-1204-00",
+   "price": 83,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792049",
+   "name": "LIMITER PIPE (YELLOW)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1130-K0",
+   "price": 136,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792050",
+   "name": "MAGNET COIL RING",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1322-00",
+   "price": 2040,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792051",
+   "name": "MAGNET COIL RING",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1322-00",
+   "price": 2400,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792052",
+   "name": "MAGNET COIL RING",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-1322-00",
+   "price": 2040,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792053",
+   "name": "MAGNET COIL RING",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "50-1322-00",
+   "price": 2358,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792054",
+   "name": "MAGNET COIL RING LEED",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1322-L1",
+   "price": 36,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792055",
+   "name": "MAGNET COMPLETE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1311-00",
+   "price": 4584,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792056",
+   "name": "MAGNET COMPLETE",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1311-00",
+   "price": 4920,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792057",
+   "name": "MAGNET COMPLETE (HERO)",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-1311-00",
+   "price": 4470,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792058",
+   "name": "MAGNET ORING KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1304-01",
+   "price": 20,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792059",
+   "name": "MAGNET ORING KIT W/OIL SEAL",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1304-02",
+   "price": 55,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792060",
+   "name": "MAGNET ORING KIT W/OIL SEAL (05 PCS) COMMON CG125-CDI",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "42-1304-11",
+   "price": 82,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792061",
+   "name": "MAGNET ORING KIT W/OIL SEAL (08 PCS) COMMON CG125-CDI",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "42-1304-02",
+   "price": 88,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792062",
+   "name": "MAGNET PLATE ONLY",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1312-00",
+   "price": 384,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792063",
+   "name": "MAGNET PLATE ONLY",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1312-00",
+   "price": 462,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792064",
+   "name": "MAGNET PLATE ONLY",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-1312-00",
+   "price": 414,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792065",
+   "name": "MAIN JET # 72",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1315-03",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792066",
+   "name": "MAIN JET # 75",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1315-04",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792067",
+   "name": "MAIN JET # 78",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1315-05",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792068",
+   "name": "MAIN SHAFT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1301-00",
+   "price": 362,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792069",
+   "name": "MAIN STAND",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1320-K0",
+   "price": 790,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792070",
+   "name": "MAIN STAND",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-1320-K0",
+   "price": 834,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792071",
+   "name": "METER CABLE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1310-00",
+   "price": 209,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792072",
+   "name": "METER CABLE 2007 MODEL",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1310-00",
+   "price": 218,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792073",
+   "name": "METER CABLE 2012 MODEL",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-1310-00",
+   "price": 211,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792074",
+   "name": "METER CABLE 2015 MODEL",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "42-1310-00",
+   "price": 217,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792075",
+   "name": "METER COMPLETE",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-1303-00",
+   "price": 888,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792076",
+   "name": "METER COMPLETE",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "42-1303-00",
+   "price": 1800,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792078",
+   "name": "METER COMPLETE (2006 MODEL)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1303-01",
+   "price": 870,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792079",
+   "name": "METER COVER",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "42-1314-00",
+   "price": 588,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792080",
+   "name": "METER COVER (2006 MODEL)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1314-01",
+   "price": 342,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792081",
+   "name": "METER GEAR SET",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "14-1321-00",
+   "price": 150,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792082",
+   "name": "METER GEAR SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1321-00",
+   "price": 205,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792083",
+   "name": "METER GEAR SET (2013 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-1321-00",
+   "price": 134,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792084",
+   "name": "METER GEAR SET (METAL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-1321-01",
+   "price": 214,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792085",
+   "name": "METER GEAR SET W/BUSH (JH-70)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1321-01",
+   "price": 208,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792086",
+   "name": "METER MOVEMENT W/NEELDE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1319-02",
+   "price": 418,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792087",
+   "name": "MIXTURE SCREW KIT",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-1323-00",
+   "price": 67,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792088",
+   "name": "MIXTURE SCREW KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1323-00",
+   "price": 86,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792089",
+   "name": "MIXTURE SCREW KIT",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1323-00",
+   "price": 97,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792090",
+   "name": "MIXTURE SCREW KIT",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1323-00",
+   "price": 140,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792091",
+   "name": "MUFFLER ASSY",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1330-K3",
+   "price": 3420,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792092",
+   "name": "MUFFLER ASSY (CHROME)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-1330-K3",
+   "price": 3420,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792093",
+   "name": "MUFFLER BEND",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1335-K3",
+   "price": 467,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792094",
+   "name": "MUFFLER BRACKET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-1331-K0",
+   "price": 276,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792095",
+   "name": "MUFFLER WASHER (COPPER)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1306-00",
+   "price": 11,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792096",
+   "name": "NEUTRAL SWITCH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1403-00",
+   "price": 56,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792097",
+   "name": "NEUTRAL SWITCH WITH WIRE",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-1403-01",
+   "price": 88,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792098",
+   "name": "OIL BOLT CROME W/WASHER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1501-00",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792099",
+   "name": "OIL GUAGE (CROME)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1514-00",
+   "price": 34,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792100",
+   "name": "OIL GUAGE (CROME)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1514-00",
+   "price": 38,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792101",
+   "name": "OIL PUMP COMPLETE",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-1506-00",
+   "price": 292,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792103",
+   "name": "OIL PUMP COMPLETE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-1506-00",
+   "price": 274,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792104",
+   "name": "OIL PUMP COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1506-00",
+   "price": 1002,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792105",
+   "name": "OIL PUMP COMPLETE",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-1506-00",
+   "price": 280,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792106",
+   "name": "OIL PUMP COMPLETE (PREMIUM QUALITY)",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "14-1506-HD",
+   "price": 353,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792107",
+   "name": "OIL PUMP COMPLETE (PREMIUM QUALITY)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-1506-HD",
+   "price": 329,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792108",
+   "name": "OIL PUMP COMPLETE (PREMIUM QUALITY)",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "24-1506-HD",
+   "price": 341,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792109",
+   "name": "OIL PUMP GEAR EASY FIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1508-01",
+   "price": 140,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792110",
+   "name": "OIL PUMP JALI",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1505-00",
+   "price": 24,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792111",
+   "name": "OIL PUMP JALI",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1505-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792112",
+   "name": "OIL PUMP KUPPA",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1504-00",
+   "price": 474,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792113",
+   "name": "OIL PUMP ROD",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1512-00",
+   "price": 61,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792114",
+   "name": "OIL PUMP ROD WITH BUSH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1512-01",
+   "price": 79,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792115",
+   "name": "OIL SEAL 11X6X24X10",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-1162-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792116",
+   "name": "OIL SEAL 12X21X4",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-1221-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792117",
+   "name": "OIL SEAL 13X8X24X5",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-1382-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792118",
+   "name": "OIL SEAL 17X29X5",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-1729-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792119",
+   "name": "OIL SEAL 18X9X30X5",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-1893-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792120",
+   "name": "OIL SEAL 21X35X7 (FRONT HUB)",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-2135-07",
+   "price": 32,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792121",
+   "name": "OIL SEAL 22X35X7",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-2235-00",
+   "price": 32,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792122",
+   "name": "OIL SEAL KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1507-00",
+   "price": 115,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792123",
+   "name": "OIL THROUGH KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1515-00",
+   "price": 44,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792124",
+   "name": "OIL THROUGH KIT",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1515-00",
+   "price": 67,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792125",
+   "name": "PETROL PIPE 160MM (1BOX = 20 PCS)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1602-01",
+   "price": 397,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792126",
+   "name": "PISTON KIT 0.50",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1615-50",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792127",
+   "name": "PISTON KIT 0.50",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1615-50",
+   "price": 1042,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792128",
+   "name": "PISTON KIT 0.50",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1615-50",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792129",
+   "name": "PISTON KIT 0.50",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1615-50",
+   "price": 852,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792130",
+   "name": "PISTON KIT 0.50",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-1615-50",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792131",
+   "name": "PISTON KIT 1.00",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1615-10",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792132",
+   "name": "PISTON KIT 1.00",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1615-10",
+   "price": 1042,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792133",
+   "name": "PISTON KIT 1.00",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1615-10",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792134",
+   "name": "PISTON KIT 1.00",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1615-10",
+   "price": 852,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792135",
+   "name": "PISTON KIT 1.00",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-1615-10",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792137",
+   "name": "PISTON KIT 1.50",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1615-15",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792138",
+   "name": "PISTON KIT 1.50",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1615-15",
+   "price": 1042,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792139",
+   "name": "PISTON KIT 1.50",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1615-15",
+   "price": 852,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792140",
+   "name": "PISTON KIT 1.50",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-1615-15",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792141",
+   "name": "PISTON KIT STD",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1615-00",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792142",
+   "name": "PISTON KIT STD",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1615-00",
+   "price": 1042,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792143",
+   "name": "PISTON KIT STD",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1615-00",
+   "price": 1008,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792144",
+   "name": "PISTON KIT STD",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1615-00",
+   "price": 852,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792145",
+   "name": "PISTON KIT STD",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-1615-00",
+   "price": 822,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792146",
+   "name": "PISTON RING SET 0.50",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1614-50",
+   "price": 245,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792147",
+   "name": "PISTON RING SET 0.50",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1614-50",
+   "price": 282,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792148",
+   "name": "PISTON RING SET 0.50",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1614-50",
+   "price": 254,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792149",
+   "name": "PISTON RING SET 1.00",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1614-10",
+   "price": 245,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792150",
+   "name": "PISTON RING SET 1.00",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1614-10",
+   "price": 282,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792151",
+   "name": "PISTON RING SET 1.00",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1614-10",
+   "price": 254,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792152",
+   "name": "PISTON RING SET 1.50",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1614-15",
+   "price": 245,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792153",
+   "name": "PISTON RING SET 1.50",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1614-15",
+   "price": 282,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792154",
+   "name": "PISTON RING SET 1.50",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1614-15",
+   "price": 254,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792156",
+   "name": "PISTON RING SET STD",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1614-00",
+   "price": 245,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792157",
+   "name": "PISTON RING SET STD",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1614-00",
+   "price": 282,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792158",
+   "name": "PISTON RING SET STD",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1614-00",
+   "price": 254,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792159",
+   "name": "PLUG C7HSA",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1604-00",
+   "price": 116,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792160",
+   "name": "PLUG CAP (BLACK)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1612-01",
+   "price": 48,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792161",
+   "name": "PLUG CAP (STEEL)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1612-00",
+   "price": 211,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792162",
+   "name": "PLUG CAP BLACK (WATER PROOF)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1612-02",
+   "price": 43,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792163",
+   "name": "PLUG DP8EA-9",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1604-00",
+   "price": 131,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792164",
+   "name": "PRESSURE PLATE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1601-00",
+   "price": 164,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792165",
+   "name": "PRESSURE PLATE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1601-00",
+   "price": 299,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792166",
+   "name": "PRESSURE PLATE",
+   "models": [
+    "QINGQI-4ST"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "13-1601-00",
+   "price": 230,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792167",
+   "name": "PRESSURE PLATE",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1601-00",
+   "price": 260,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792168",
+   "name": "PULSAR COIL",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1617-00",
+   "price": 146,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792169",
+   "name": "PULSAR COIL",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-1617-00",
+   "price": 120,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792170",
+   "name": "PUSH ROD",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1603-00",
+   "price": 262,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792171",
+   "name": "PUSH ROD (BLACK)",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-1603-00",
+   "price": 232,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792172",
+   "name": "PUSH RUBBER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1607-00",
+   "price": 8,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792173",
+   "name": "R.P.M CABLE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1810-00",
+   "price": 235,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792174",
+   "name": "R.P.M. GEAR",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1806-00",
+   "price": 158,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792175",
+   "name": "REAR FORK (BLACK) (CHIMTA) WITH BUSH",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1840-K3",
+   "price": 1980,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792176",
+   "name": "REAR SHOCK SPRING (SET)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1875-K0",
+   "price": 780,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792177",
+   "name": "REAR SHOCK SPRING SET",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-1875-K0",
+   "price": 1518,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792178",
+   "name": "RECTIFIER",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-1805-00",
+   "price": 324,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792179",
+   "name": "RECTIFIER 12V",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1805-00",
+   "price": 294,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792180",
+   "name": "RECTIFIER 12V (TRANSPARENT)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1805-TP",
+   "price": 310,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792181",
+   "name": "RECTIFIER LEED",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-1805-K1",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792182",
+   "name": "ROCKER PIN",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1802-00",
+   "price": 238,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792183",
+   "name": "ROCKER PIN (2PC/SET)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1802-00",
+   "price": 62,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792184",
+   "name": "ROCKER PIN WASHER",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1812-00",
+   "price": 11,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792185",
+   "name": "ROCKER PLATE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1811-00",
+   "price": 1038,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792187",
+   "name": "ROCKER PLATE",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1811-00",
+   "price": 1452,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792188",
+   "name": "ROCKER W/BEARING & TAPPET SCREW",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-1801-00",
+   "price": 1224,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792189",
+   "name": "ROCKER W/TAPPET NUT BOLT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1801-00",
+   "price": 458,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792190",
+   "name": "ROCKER W/TAPPET NUT BOLT",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1801-00",
+   "price": 498,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792191",
+   "name": "ROLLER BOLT (CROME) WITH WASHER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1803-00",
+   "price": 26,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792192",
+   "name": "ROLLER RUBBER ONLY WITHOUT BUSH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1807-01",
+   "price": 46,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792193",
+   "name": "ROLLER RUBBER ONLY WITHOUT BUSH",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1807-01",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792194",
+   "name": "ROLLER TENSIONER SET WITHOUT BUSH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1808-01",
+   "price": 83,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792195",
+   "name": "ROLLER TENSIONER SET WITHOUT BUSH",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-1808-01",
+   "price": 82,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792196",
+   "name": "SEAT ASSY DOUBLE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1960-K0",
+   "price": 3420,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792197",
+   "name": "SEAT ASSY. DOUBLE",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-1960-K0",
+   "price": 2730,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792198",
+   "name": "SEAT COWL (BLACK) SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1945-K2",
+   "price": 256,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792199",
+   "name": "SEAT COWL (RED SET)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-1945-K1",
+   "price": 294,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792200",
+   "name": "SEAT COWL (RED) SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1945-K1",
+   "price": 288,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792201",
+   "name": "SEAT PIPE ASSY WITH BRACKET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1936-K3",
+   "price": 696,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792202",
+   "name": "SHOCK PUMP REAR SET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1910-C0",
+   "price": 1194,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792203",
+   "name": "SHOCK PUMP REAR SET",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-1910-C0",
+   "price": 1788,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792204",
+   "name": "SHOCK REAR",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-1901-00",
+   "price": 3780,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792205",
+   "name": "SHOCK REAR BLACK H/D",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-1901-02",
+   "price": 4338,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792206",
+   "name": "SHOCK REAR RED H/D",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-1901-03",
+   "price": 4338,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792207",
+   "name": "SHOCK SEAL (DOUBLE SPRING)27X37X10.5",
+   "models": [
+    "JH90"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "19-1920-00",
+   "price": 46,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792208",
+   "name": "SHOCK SEAL 25X35X9",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-1920-00",
+   "price": 40,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792210",
+   "name": "SHOCK SEAL 27X39X10.5",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "07-1920-00",
+   "price": 47,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792211",
+   "name": "SIDE COVER SET L & R (BLACK SET)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "18-1953-K2",
+   "price": 672,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792212",
+   "name": "SIDE STAND",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "36-1935-K2",
+   "price": 308,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792213",
+   "name": "SIDE STAND",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Body Parts",
+   "code": "04-1935-K2",
+   "price": 300,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792214",
+   "name": "SLIDE PIN JET",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-1905-00",
+   "price": 98,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792215",
+   "name": "SLIDE PIN JET",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-1905-00",
+   "price": 98,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792216",
+   "name": "SLIDE PIN JET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1905-00",
+   "price": 98,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792217",
+   "name": "SLIDE PIN JET",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-1905-00",
+   "price": 106,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792218",
+   "name": "SLIDE PIN JET",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-1905-00",
+   "price": 108,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792219",
+   "name": "SLOW JET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1932-00",
+   "price": 37,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792220",
+   "name": "SOUND FLASHER 12V",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1913-00",
+   "price": 160,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792221",
+   "name": "SPOKE BUTTED 2.25X17",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-1929-01",
+   "price": 1992,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792222",
+   "name": "SPOKE BUTTED 2.50X17",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-1929-02",
+   "price": 2034,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792223",
+   "name": "SPOKE BUTTED 2.50X18",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-1929-03",
+   "price": 2106,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792224",
+   "name": "SPOKE BUTTED 3.00X17",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-1929-04",
+   "price": 2382,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792225",
+   "name": "SPOKE STRAIGHT 3.00X17 (BIG NIPPLE)",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "42-1929-44",
+   "price": 2412,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792226",
+   "name": "SPROCKET BOLT KIT (CROME)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1906-00",
+   "price": 161,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792227",
+   "name": "SPROCKET BOLT KIT (GOLDEN)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-1906-02",
+   "price": 157,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792228",
+   "name": "SPROCKET BOLT KIT GALVANIZE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1906-01",
+   "price": 119,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792229",
+   "name": "SPROCKET LOCK 14T",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1919-00",
+   "price": 11,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792230",
+   "name": "SPROCKET PANNEL",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-1904-00",
+   "price": 702,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792231",
+   "name": "STUD",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "04-1908-00",
+   "price": 227,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792232",
+   "name": "STUD",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "07-1908-00",
+   "price": 247,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792234",
+   "name": "STUD",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Other",
+   "code": "24-1908-00",
+   "price": 228,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792235",
+   "name": "SWITCH",
+   "models": [
+    "CD100"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "14-1917-00",
+   "price": 1104,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792236",
+   "name": "SWITCH",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1917-00",
+   "price": 306,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792237",
+   "name": "SWITCH",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1917-00",
+   "price": 304,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792238",
+   "name": "SWITCH",
+   "models": [
+    "HERO"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "23-1917-00",
+   "price": 840,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792239",
+   "name": "SWITCH KIT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "04-1916-00",
+   "price": 666,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792240",
+   "name": "SWITCH KIT",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-1916-00",
+   "price": 666,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792241",
+   "name": "TAPPET COVER (CROME)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2009-00",
+   "price": 70,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792242",
+   "name": "TAPPET COVER (CROME)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2009-00",
+   "price": 97,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792243",
+   "name": "TAPPET NUT & BOLT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2003-00",
+   "price": 25,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792244",
+   "name": "TAPPET NUT & BOLT",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2003-00",
+   "price": 37,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792245",
+   "name": "TENSIONER PATTI",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-2007-00",
+   "price": 88,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792246",
+   "name": "TENSIONER PATTI",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2007-00",
+   "price": 85,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792247",
+   "name": "THROTTLE CABLE",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-2010-00",
+   "price": 156,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792248",
+   "name": "THROTTLE CABLE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2010-00",
+   "price": 161,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792249",
+   "name": "THROTTLE CABLE",
+   "models": [
+    "CG125-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "42-2010-00",
+   "price": 221,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792250",
+   "name": "THROTTLE CABLE 64 MM",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-2010-00",
+   "price": 156,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792251",
+   "name": "TIMING CHAIN 82L",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2001-00",
+   "price": 234,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792252",
+   "name": "TIMING CHAIN 84L",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2001-00",
+   "price": 234,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792253",
+   "name": "TIMING CHAIN KIT 82L",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2001-01",
+   "price": 308,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792254",
+   "name": "TIMING CHAIN KIT 84L",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2001-01",
+   "price": 308,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792255",
+   "name": "TIMING COVER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2008-00",
+   "price": 170,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792256",
+   "name": "TIMING GEAR",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "18-2002-00",
+   "price": 113,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792258",
+   "name": "TIMING GEAR",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2002-00",
+   "price": 113,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792259",
+   "name": "TIMING GEAR (2012 MODEL)",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "36-2002-00",
+   "price": 122,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792260",
+   "name": "TIMING ROD W/PUSH RUBBER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2023-00",
+   "price": 96,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792261",
+   "name": "TIMING ROD W/PUSH RUBBER & SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2023-01",
+   "price": 109,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792262",
+   "name": "TIMING SPRING",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2022-00",
+   "price": 16,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792263",
+   "name": "TOP COVER (BLACK)",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2011-00",
+   "price": 962,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792264",
+   "name": "TOP COVER (HEAD)",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2011-00",
+   "price": 198,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792265",
+   "name": "TOP COVER ORING",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2020-00",
+   "price": 50,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792266",
+   "name": "TRANSMISSION ASSY. COMPLETE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2024-00",
+   "price": 2712,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792267",
+   "name": "TRANSMISSION ASSY. COMPLETE",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2024-00",
+   "price": 4668,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792268",
+   "name": "TRANSMISSION ASSY. COMPLETE",
+   "models": [
+    "UNITED-100"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "50-2024-00",
+   "price": 3546,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792269",
+   "name": "TYRE SEALANT 250 ML",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-2005-01",
+   "price": 300,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792270",
+   "name": "TYRE SEALANT 450 ML",
+   "models": [
+    "UNIVERSAL"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "00-2005-02",
+   "price": 540,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792271",
+   "name": "VALVE CAP",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2209-00",
+   "price": 28,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792272",
+   "name": "VALVE COTTER",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2204-00",
+   "price": 13,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792273",
+   "name": "VALVE COTTER",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2204-00",
+   "price": 18,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792274",
+   "name": "VALVE COTTER",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-2204-00",
+   "price": 18,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792275",
+   "name": "VALVE COTTER",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2204-00",
+   "price": 14,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792276",
+   "name": "VALVE SEAL",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2202-00",
+   "price": 13,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792277",
+   "name": "VALVE SEAL",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2202-00",
+   "price": 14,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792278",
+   "name": "VALVE SEAL",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2202-00",
+   "price": 14,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792279",
+   "name": "VALVE SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2208-00",
+   "price": 510,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792281",
+   "name": "VALVE SET",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-2208-00",
+   "price": 756,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792282",
+   "name": "VALVE SET",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2208-00",
+   "price": 498,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792283",
+   "name": "VALVE SET OVER SIZE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2208-02",
+   "price": 452,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792284",
+   "name": "VALVE SET OVER SIZE",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "17-2208-02",
+   "price": 744,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792285",
+   "name": "VALVE SET OVER SIZE",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2208-02",
+   "price": 450,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792286",
+   "name": "VALVE SPRING SET",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2206-00",
+   "price": 138,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792287",
+   "name": "VALVE SPRING SET",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "07-2206-00",
+   "price": 288,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792288",
+   "name": "VALVE SPRING SET",
+   "models": [
+    "SOHRAB"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "20-2206-00",
+   "price": 128,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792289",
+   "name": "WEIGHT COLLAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "04-2305-00",
+   "price": 60,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792290",
+   "name": "WHEEL CHAIN 420X104L",
+   "models": [
+    "420X104L"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-2306-01",
+   "price": 966,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792291",
+   "name": "WHEEL CHAIN 420X104L W/O BOX",
+   "models": [
+    "420X104L"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-2306-11",
+   "price": 942,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792292",
+   "name": "WHEEL CHAIN 428X100L",
+   "models": [
+    "428X100L"
+   ],
+   "company": "CRLF",
+   "category": "Engine Parts",
+   "code": "00-2306-02",
+   "price": 1122,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792293",
+   "name": "WHEEL DRUM FRONT",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "04-2302-00",
+   "price": 2568,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792294",
+   "name": "WHEEL DRUM REAR",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "04-2301-00",
+   "price": 2640,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792295",
+   "name": "WHEEL DRUM REAR",
+   "models": [
+    "CG125"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "07-2301-00",
+   "price": 4800,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792296",
+   "name": "WHEEL RIM SET (2.25X17/2.50X17)",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "18-2309-C2",
+   "price": 3270,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792297",
+   "name": "WHEEL SLEEVE",
+   "models": [
+    "CD70F"
+   ],
+   "company": "CRLF",
+   "category": "Tyres & Tubes",
+   "code": "04-2304-00",
+   "price": 94,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792299",
+   "name": "WIRING",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-2307-00",
+   "price": 1020,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792300",
+   "name": "WIRING",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-2307-00",
+   "price": 1056,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792301",
+   "name": "WIRING",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-2307-00",
+   "price": 1038,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792302",
+   "name": "WIRING",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-2307-00",
+   "price": 1020,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792303",
+   "name": "WIRING \"HEAVY DUTY\"",
+   "models": [
+    "CD70-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "18-2307-HD",
+   "price": 1512,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792304",
+   "name": "WIRING \"HEAVY DUTY\"",
+   "models": [
+    "CD70-EURO2"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "36-2307-HD",
+   "price": 1560,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792305",
+   "name": "WIRING \"HEAVY DUTY\"",
+   "models": [
+    "CG125-CDI"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "17-2307-HD",
+   "price": 1512,
+   "stock": 0,
+   "image": ""
+  },
+  {
+   "id": "1789948792306",
+   "name": "WIRING \"HEAVY DUTY\"",
+   "models": [
+    "STAR"
+   ],
+   "company": "CRLF",
+   "category": "Electrical",
+   "code": "24-2307-HD",
+   "price": 1512,
    "stock": 0,
    "image": ""
   }
