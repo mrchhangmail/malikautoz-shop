@@ -189,6 +189,27 @@ dialog.photo p{margin:10px 0;font-weight:700}
 #sheet .sheet-foot .btn{min-height:42px;font-size:15px}
 #sheet .err{font-size:12.5px;margin:0 0 6px}
 @media (pointer:coarse){#sheet .field input,#sheet .field textarea,#sheet .field select{font-size:16px}}   /* keeps phones from zooming in on focus */
+
+/* Names of Allah */
+.allah-wrap{position:relative;z-index:1;margin-top:14px}
+.allah{background:var(--surface);border:1px solid var(--line);border-inline-start:5px solid var(--amber);border-radius:10px;padding:10px 14px 12px}
+.allah-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.allah-top h2{margin:0;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-2);text-transform:uppercase}
+html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13px}
+.allah-no{font-size:12px;color:var(--ink-2);font-weight:650;direction:ltr}
+.allah-body{transition:opacity .4s;text-align:center}
+.allah-body.swap{opacity:0}
+.allah-body p{margin:0}
+.allah-ar{font-family:"Amiri","Noto Naskh Arabic","Scheherazade New","Traditional Arabic","Geeza Pro","Segoe UI",serif;font-size:36px;line-height:1.6;color:var(--ink)}
+.allah-tr{font-size:15px;font-weight:750;font-family:var(--font)}
+.allah-mean{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-size:14px}
+.allah-mean .sep{color:var(--ink-2)}
+#allah-en,.allah-desc:not(.ur){font-family:var(--font)}
+#allah-ur,.allah-desc.ur{font-family:var(--font-ur);line-height:1.9}
+#allah-ur{font-size:16px}
+.allah-desc{font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.allah-desc.ur{font-size:13.5px}
+@media (prefers-reduced-motion:reduce){.allah-body{transition:none}}
 </style>
 </head>
 <body>
@@ -215,6 +236,18 @@ dialog.photo p{margin:10px 0;font-weight:700}
 </header>
 
 <main>
+  <div class="wrap allah-wrap" id="allah-wrap" hidden>
+    <section class="allah" aria-labelledby="allah-h">
+      <div class="allah-top"><h2 id="allah-h" data-i18n="allahTitle"></h2><span class="allah-no num" id="allah-no"></span></div>
+      <div class="allah-body" id="allah-body" aria-live="off">
+        <p class="allah-ar" id="allah-ar" lang="ar" dir="rtl"></p>
+        <p class="allah-tr" id="allah-tr" dir="ltr"></p>
+        <p class="allah-mean"><span id="allah-en" lang="en" dir="ltr"></span><span class="sep" aria-hidden="true">•</span><span id="allah-ur" lang="ur" dir="rtl"></span></p>
+        <p class="allah-desc" id="allah-den" lang="en" dir="ltr"></p>
+        <p class="allah-desc ur" id="allah-dur" lang="ur" dir="rtl"></p>
+      </div>
+    </section>
+  </div>
   <section class="picker wrap" aria-labelledby="pick-h">
     <h2 id="pick-h" data-i18n="pickBike"></h2>
     <div id="chips" class="chips" role="group" aria-labelledby="pick-h"></div>
@@ -316,6 +349,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
 
 <script src="catalog-config.js"></script>
 <script src="part-art.js"></script>
+<script src="asma-ul-husna.js"></script>
 <script>
 (function(){
 'use strict';
@@ -323,7 +357,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
 /* ===== Shop details live in catalog-config.js (so updating this page never erases them) ===== */
 const CONFIG = Object.assign({
   shopName: 'Malik Autoz', logo: 'icon-192.png', whatsapp: '', phone: '', address: '', hours: '', mapsUrl: '',
-  photoBase: 'img/', easypaisa: '03363330884', easypaisaName: ''
+  photoBase: 'img/', easypaisa: '03363330884', easypaisaName: '', namesOfAllah: true, namesMinutes: 5
 }, window.CATALOG_CONFIG || {}, {
   catalogUrl: 'catalog.json',
   currency: 'Rs',
@@ -348,6 +382,7 @@ const I18N = {
     inOrder:'{n} in your order', review:'Review order', yourOrder:'Your order', close:'Close',
     remove:'Remove', clear:'Clear order', total:'Parts total',
     deliveryNote:'Delivery charges are confirmed on WhatsApp before you pay.',
+    allahTitle:'Names of Allah',
     fPhone:'Contact number', needPhone:'Enter your contact number.', badPhone:'Enter a valid phone number (at least 10 digits).',
     payShop:'Pay at the shop', payEasypaisa:'Easypaisa', payEpNote:'Send the payment to Easypaisa {n} and share the screenshot on WhatsApp.', needPay:'Choose how you will pay.',
     fName:'Your name', fBike:'Your bike (model and year)', fCity:'City',
@@ -379,6 +414,7 @@ const I18N = {
     inOrder:'آرڈر میں {n} آئٹم', review:'آرڈر دیکھیں', yourOrder:'آپ کا آرڈر', close:'بند کریں',
     remove:'ہٹائیں', clear:'آرڈر صاف کریں', total:'پارٹس کی کل رقم',
     deliveryNote:'ڈیلیوری چارجز آپ کی ادائیگی سے پہلے واٹس ایپ پر بتائے جائیں گے۔',
+    allahTitle:'اللہ کے نام',
     fPhone:'رابطہ نمبر', needPhone:'اپنا رابطہ نمبر لکھیں۔', badPhone:'درست فون نمبر لکھیں (کم از کم 10 ہندسے)۔',
     payShop:'دکان پر ادائیگی', payEasypaisa:'ایزی پیسہ', payEpNote:'رقم ایزی پیسہ {n} پر بھیجیں اور اسکرین شاٹ واٹس ایپ پر شیئر کریں۔', needPay:'ادائیگی کا طریقہ منتخب کریں۔',
     fName:'آپ کا نام', fBike:'آپ کی موٹر سائیکل (ماڈل اور سال)', fCity:'شہر',
@@ -748,6 +784,38 @@ function setupBrand(){
     const a = $('#call'); a.setAttribute('href', 'tel:' + CONFIG.phone.replace(/[^\d+]/g, '')); a.hidden = false;
   }
 }
+/* ===== Names of Allah: one name at a time, changing every few minutes ===== */
+let allahTimer = null, allahShown = -1;
+function allahStep(){ return Math.max(1, Number(CONFIG.namesMinutes) || 5) * 60000; }
+function allahIndex(){ return Math.floor(Date.now() / allahStep()) % window.ASMA_UL_HUSNA.length; }
+function showAllah(animate){
+  const list = window.ASMA_UL_HUSNA, i = allahIndex();
+  if(i === allahShown) return;
+  const body = $('#allah-body');
+  const fill = () => {
+    const n = list[i];
+    $('#allah-ar').textContent = n[0]; $('#allah-tr').textContent = n[1];
+    $('#allah-en').textContent = n[2]; $('#allah-ur').textContent = n[3];
+    $('#allah-den').textContent = n[4]; $('#allah-dur').textContent = n[5];
+    $('#allah-no').textContent = (i + 1) + ' / ' + list.length;
+    allahShown = i; body.classList.remove('swap');
+  };
+  if(animate && allahShown !== -1 && !matchMedia('(prefers-reduced-motion: reduce)').matches){ body.classList.add('swap'); setTimeout(fill, 400); }
+  else fill();
+}
+function scheduleAllah(){
+  clearTimeout(allahTimer);
+  const step = allahStep();
+  allahTimer = setTimeout(() => { showAllah(true); scheduleAllah(); }, step - (Date.now() % step) + 30);
+}
+function initAllah(){
+  const list = window.ASMA_UL_HUSNA;
+  if(CONFIG.namesOfAllah === false || !Array.isArray(list) || !list.length) return;
+  $('#allah-wrap').hidden = false;
+  showAllah(false); scheduleAllah();
+  document.addEventListener('visibilitychange', () => { if(!document.hidden){ showAllah(false); scheduleAllah(); } });
+}
+
 function renderContact(){
   const box = $('#contact-rows'); box.replaceChildren();
   const wa = (CONFIG.whatsapp || '').replace(/\D/g, '');
@@ -972,6 +1040,7 @@ function init(){
   $('#shop-name').textContent = CONFIG.shopName;
   document.title = CONFIG.shopName + ' – Motorcycle spare parts';
   setupBrand();
+  initAllah();
   $('#chat').setAttribute('href', waLink('Assalam o Alaikum, I have a question about a spare part.'));
   const saved = lsGet(LS.lang);
   state.lang = (saved === 'ur' || saved === 'en') ? saved : ((navigator.language || '').toLowerCase().indexOf('ur') === 0 ? 'ur' : 'en');
