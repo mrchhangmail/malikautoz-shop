@@ -36,6 +36,8 @@ ul.miss{margin:8px 0 0;padding-inline-start:20px;font-size:14px;max-height:240px
 ol{padding-inline-start:22px;margin:6px 0}
 li{margin:4px 0}
 code{background:var(--paper);padding:1px 6px;border-radius:4px}
+label.chk{display:flex;align-items:center;gap:8px;margin:10px 0;font-weight:650;cursor:pointer}
+label.chk input{width:22px;height:22px;accent-color:var(--ink)}
 #result table{border-collapse:collapse;font-size:14px;margin-top:8px}
 #result td,#result th{border-bottom:1px solid var(--line);padding:4px 10px;text-align:start}
 </style>
@@ -62,6 +64,7 @@ code{background:var(--paper);padding:1px 6px;border-radius:4px}
     <p class="muted">Click the box under a photo and start typing the part name or SKU, then pick it from the list.</p>
     <datalist id="parts"></datalist>
     <div id="cards"></div>
+    <label class="chk"><input id="wmOn" type="checkbox" checked> Add the Malik Autoz watermark to each photo</label>
     <p><button class="btn" id="make" type="button" disabled>Prepare photos and download ZIP</button></p>
     <div id="result" aria-live="polite"></div>
   </section>
@@ -78,6 +81,7 @@ code{background:var(--paper);padding:1px 6px;border-radius:4px}
   </section>
 </main>
 
+<script src="catalog-config.js"></script>
 <script>
 (function(){
 'use strict';
@@ -200,13 +204,49 @@ async function loadBitmap(file){
   if(window.createImageBitmap){ try{ return await createImageBitmap(file); }catch(e){} }
   return await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = URL.createObjectURL(file); });
 }
-async function convert(file){
+/* ---------- watermark (your logo, drawn faintly on each photo) ---------- */
+async function loadWatermark(){
+  const src = (window.CATALOG_CONFIG && window.CATALOG_CONFIG.logo) || 'icon-192.png';
+  const img = await new Promise(res => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; });
+  if(!img) return null;
+  const S = 192, c = document.createElement('canvas'); c.width = c.height = S;
+  const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, S, S); x.drawImage(img, 0, 0, S, S);
+  const px = x.getImageData(0, 0, S, S).data;
+  function tint(r, g, b){
+    const o = document.createElement('canvas'); o.width = o.height = S;
+    const ox = o.getContext('2d'), id = ox.createImageData(S, S);
+    for(let i = 0; i < px.length; i += 4){
+      const lum = 0.299 * px[i] + 0.587 * px[i + 1] + 0.114 * px[i + 2];
+      id.data[i] = r; id.data[i + 1] = g; id.data[i + 2] = b;
+      id.data[i + 3] = Math.max(0, Math.min(255, (225 - lum) * 255 / 225 * 1.15));
+    }
+    ox.putImageData(id, 0, 0); return o;
+  }
+  return { dark: tint(15, 31, 36), light: tint(255, 255, 255) };
+}
+function stamp(ctx, w, h, wm){
+  const s = Math.min(w, h);
+  const put = (img, x, y, size, a) => { ctx.globalAlpha = a; ctx.drawImage(img, x, y, size, size); };
+  const big = Math.round(s * 0.5), bx = Math.round((w - big) / 2), by = Math.round((h - big) / 2);
+  put(wm.light, bx + 1, by + 1, big, 0.16); put(wm.dark, bx, by, big, 0.2);            // large faint centre mark
+  const m = Math.round(s * 0.13), pad = Math.round(s * 0.03), cx = w - m - pad, cy = h - m - pad - Math.round(s * 0.04);
+  put(wm.light, cx + 1, cy + 1, m, 0.5); put(wm.dark, cx, cy, m, 0.55);                // small corner mark
+  const fs = Math.max(10, Math.round(s * 0.036));
+  ctx.font = '700 ' + fs + 'px Arial, Helvetica, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  if('letterSpacing' in ctx) ctx.letterSpacing = Math.round(fs * 0.15) + 'px';
+  ctx.globalAlpha = 0.5; ctx.fillStyle = '#fff'; ctx.fillText('MALIK AUTOZ', w / 2 + 1, h - pad + 1);
+  ctx.globalAlpha = 0.6; ctx.fillStyle = '#0F1F24'; ctx.fillText('MALIK AUTOZ', w / 2, h - pad);
+  ctx.globalAlpha = 1;
+}
+
+async function convert(file, wm){
   const bmp = await loadBitmap(file);
   const w0 = bmp.width || bmp.naturalWidth, h0 = bmp.height || bmp.naturalHeight;
   const k = Math.min(1, MAX_SIDE / Math.max(w0, h0));
   const w = Math.max(1, Math.round(w0 * k)), h = Math.max(1, Math.round(h0 * k));
   const c = document.createElement('canvas'); c.width = w; c.height = h;
   const ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h); ctx.drawImage(bmp, 0, 0, w, h);
+  if(wm) stamp(ctx, w, h, wm);
   let blob = await new Promise(r => c.toBlob(r, 'image/webp', 0.8)), ext = 'webp';
   if(!blob || blob.type !== 'image/webp'){ blob = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.82)); ext = 'jpg'; }
   if(bmp.close) bmp.close();
@@ -245,10 +285,12 @@ async function make(){
   btn.disabled = true; out.textContent = 'Preparing…';
   try{
     const files = [], rows = [];
+    let wm = null, wmMissing = false;
+    if($('#wmOn').checked){ wm = await loadWatermark(); wmMissing = !wm; }
     for(let i = 0; i < state.entries.length; i++){
       const e = state.entries[i];
       out.textContent = 'Preparing photo ' + (i + 1) + ' of ' + state.entries.length + '…';
-      const r = await convert(e.file);
+      const r = await convert(e.file, wm);
       files.push({ name: 'img/' + e.code + '.' + r.ext, data: r.data });
       rows.push([e.code + '.' + r.ext, r.w + ' × ' + r.h, fmtSize(r.data.length)]);
     }
@@ -259,6 +301,11 @@ async function make(){
     tbl.innerHTML = '<tr><th>File</th><th>Size</th><th>Weight</th></tr>';
     rows.forEach(r => { const tr = document.createElement('tr'); r.forEach(c => { const td = document.createElement('td'); td.textContent = c; tr.append(td); }); tbl.append(tr); });
     out.replaceChildren(Object.assign(document.createElement('p'), { textContent: 'Done. ' + files.length + ' photo(s) saved in img-photos.zip. Now follow step 4 below.' }), tbl);
+    if(wmMissing){
+      const wn = document.createElement('p'); wn.className = 'muted';
+      wn.textContent = 'The logo file was not found, so the photos were prepared without the watermark. Upload icon-192.png to the shop repo and try again.';
+      out.append(wn);
+    }
     if(rows.some(r => /\.jpg$/.test(r[0]))){
       const note = document.createElement('p'); note.className = 'muted';
       note.textContent = 'Your browser saved some photos as JPG. If a part already had a WebP photo, delete the old one on GitHub or the old picture will keep showing.';

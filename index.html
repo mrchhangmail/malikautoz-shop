@@ -633,10 +633,10 @@ function showArt(row, it){
   if(CONFIG.showIllustrations === false || !window.PartArt) return;
   const r1 = row.querySelector('.row1');
   if(!r1 || r1.querySelector('.thumbbtn')) return;
-  const src = PartArt.dataUri(PartArt.keyFor(it.name, it.category));
-  const img = h('img', { class:'thumb', src, alt:'', width:'76', height:'76', decoding:'async' });
+  const key = PartArt.keyFor(it.name, it.category);
+  const img = h('img', { class:'thumb', src:PartArt.dataUri(key), alt:'', width:'76', height:'76', decoding:'async' });
   const btn = h('button', { class:'thumbbtn art', type:'button', 'aria-label':t('viewIllus', { name:it.name }),
-                            onclick:() => openPhoto(src, it.name, true) }, img, h('span', { class:'artbadge', text:t('illus') }));
+                            onclick:() => openPhoto(PartArt.dataUri(key, true), it.name, true) }, img, h('span', { class:'artbadge', text:t('illus') }));
   r1.insertBefore(btn, r1.firstChild);
 }
 function loadPhoto(row){
