@@ -161,6 +161,34 @@ dialog.photo p{margin:10px 0;font-weight:700}
 .chips.small .chip{min-height:40px;padding:0 14px;font-size:15px}
 .field select{width:100%;min-height:46px;padding:10px 12px;border:2px solid var(--ink);border-radius:8px;font:inherit;font-size:16px;background:var(--surface);color:var(--ink)}
 #recv-options .opt{align-items:center}
+
+/* compact order sheet */
+#sheet{font-size:14px}
+#sheet .sheet-head{padding:9px 14px}
+#sheet .sheet-head h2{font-size:16px}
+#sheet .sheet-head .btn{min-height:34px;padding:0 14px;font-size:13px;border-width:1.5px}
+#sheet .sheet-body{padding:0 14px 10px}
+#sheet .line{padding:9px 0;gap:10px}
+#sheet .l-name{font-size:14px;font-weight:650}
+#sheet .l-fits{font-size:12px}
+#sheet .l-total{font-size:13px;margin-top:2px}
+#sheet .step{border-width:1.5px}
+#sheet .step button{width:34px;height:30px;font-size:17px}
+#sheet .step output{min-width:30px;font-size:14px}
+#sheet .linkbtn{font-size:12px;min-height:28px}
+#sheet .sum{padding:9px 0 3px;font-size:15px}
+#sheet .note{font-size:12px;margin:0 0 10px}
+#sheet .field{margin:0 0 9px}
+#sheet .field span{font-size:12px;margin-bottom:3px}
+#sheet .field input,#sheet .field textarea,#sheet .field select{font-size:14px;min-height:38px;padding:6px 10px;border-width:1.5px;border-radius:7px}
+#sheet fieldset.pay{margin:0 0 9px}
+#sheet fieldset.pay legend{font-size:12px;margin-bottom:2px}
+#sheet .opt{font-size:14px;font-weight:500;min-height:32px;gap:8px}
+#sheet .opt input{width:17px;height:17px}
+#sheet .sheet-foot{padding:9px 14px calc(9px + env(safe-area-inset-bottom))}
+#sheet .sheet-foot .btn{min-height:42px;font-size:15px}
+#sheet .err{font-size:12.5px;margin:0 0 6px}
+@media (pointer:coarse){#sheet .field input,#sheet .field textarea,#sheet .field select{font-size:16px}}   /* keeps phones from zooming in on focus */
 </style>
 </head>
 <body>
@@ -253,6 +281,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
       <ul id="lines" class="lines"></ul>
       <div class="sum"><span data-i18n="total"></span><span id="total" class="num"></span></div>
       <label class="field"><span data-i18n="fName"></span><input id="f-name" type="text" autocomplete="name"></label>
+      <label class="field"><span data-i18n="fPhone"></span><input id="f-phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" placeholder="03XX XXXXXXX"></label>
       <label class="field"><span data-i18n="fBike"></span><input id="f-bike" type="text"></label>
 
       <fieldset class="pay" id="recv-box">
@@ -272,9 +301,9 @@ dialog.photo p{margin:10px 0;font-weight:700}
 
       <fieldset class="pay">
         <legend data-i18n="pay"></legend>
-        <label class="opt"><input type="radio" name="pay" value="cod" checked><span id="cod-label" data-i18n="cod"></span></label>
-        <label class="opt"><input type="radio" name="pay" value="wallet"><span data-i18n="wallet"></span></label>
-        <label class="opt"><input type="radio" name="pay" value="bank"><span data-i18n="bank"></span></label>
+        <label class="opt"><input type="radio" name="pay" value="shop"><span data-i18n="payShop"></span></label>
+        <label class="opt" id="ep-opt"><input type="radio" name="pay" value="easypaisa"><span id="ep-label"></span></label>
+        <p class="note" id="pay-note" hidden></p>
       </fieldset>
       <button id="clear" class="linkbtn" type="button" data-i18n="clear"></button>
     </div>
@@ -294,7 +323,7 @@ dialog.photo p{margin:10px 0;font-weight:700}
 /* ===== Shop details live in catalog-config.js (so updating this page never erases them) ===== */
 const CONFIG = Object.assign({
   shopName: 'Malik Autoz', logo: 'icon-192.png', whatsapp: '', phone: '', address: '', hours: '', mapsUrl: '',
-  photoBase: 'img/'
+  photoBase: 'img/', easypaisa: '03363330884', easypaisaName: ''
 }, window.CATALOG_CONFIG || {}, {
   catalogUrl: 'catalog.json',
   currency: 'Rs',
@@ -319,13 +348,15 @@ const I18N = {
     inOrder:'{n} in your order', review:'Review order', yourOrder:'Your order', close:'Close',
     remove:'Remove', clear:'Clear order', total:'Parts total',
     deliveryNote:'Delivery charges are confirmed on WhatsApp before you pay.',
+    fPhone:'Contact number', needPhone:'Enter your contact number.', badPhone:'Enter a valid phone number (at least 10 digits).',
+    payShop:'Pay at the shop', payEasypaisa:'Easypaisa', payEpNote:'Send the payment to Easypaisa {n} and share the screenshot on WhatsApp.', needPay:'Choose how you will pay.',
     fName:'Your name', fBike:'Your bike (model and year)', fCity:'City',
     fAddress:'Full delivery address',
     receiveTitle:'How would you like to receive it?', fWhenDate:'Preferred date', fWhenTime:'Preferred time', whenOptional:'(optional)',
     needReceive:'Choose how you want to receive the order.', needAddress:'Enter your delivery address.', needWhen:'Choose a date and a time for delivery.',
-    codPickup:'Pay at the shop', fitsAsk:'Ask us which bikes it fits',
+    fitsAsk:'Ask us which bikes it fits',
     illus:'Illustration', illusNote:'Illustration only. The actual part may look different.', viewIllus:'View illustration of {name}',
-    pay:'Payment', cod:'Cash on delivery', wallet:'JazzCash / Easypaisa', bank:'Bank transfer',
+    pay:'Payment',
     send:'Send order on WhatsApp', needName:'Enter your name to send the order.',
     noNumber:'The shop WhatsApp number is not set yet.',
     loading:'Loading parts…', loadError:'Could not load the catalog. Check your connection and try again.', retry:'Try again',
@@ -348,13 +379,15 @@ const I18N = {
     inOrder:'آرڈر میں {n} آئٹم', review:'آرڈر دیکھیں', yourOrder:'آپ کا آرڈر', close:'بند کریں',
     remove:'ہٹائیں', clear:'آرڈر صاف کریں', total:'پارٹس کی کل رقم',
     deliveryNote:'ڈیلیوری چارجز آپ کی ادائیگی سے پہلے واٹس ایپ پر بتائے جائیں گے۔',
+    fPhone:'رابطہ نمبر', needPhone:'اپنا رابطہ نمبر لکھیں۔', badPhone:'درست فون نمبر لکھیں (کم از کم 10 ہندسے)۔',
+    payShop:'دکان پر ادائیگی', payEasypaisa:'ایزی پیسہ', payEpNote:'رقم ایزی پیسہ {n} پر بھیجیں اور اسکرین شاٹ واٹس ایپ پر شیئر کریں۔', needPay:'ادائیگی کا طریقہ منتخب کریں۔',
     fName:'آپ کا نام', fBike:'آپ کی موٹر سائیکل (ماڈل اور سال)', fCity:'شہر',
     fAddress:'ڈیلیوری کا مکمل پتہ',
     receiveTitle:'آپ آرڈر کیسے وصول کرنا چاہتے ہیں؟', fWhenDate:'پسندیدہ تاریخ', fWhenTime:'پسندیدہ وقت', whenOptional:'(اختیاری)',
     needReceive:'آرڈر وصول کرنے کا طریقہ منتخب کریں۔', needAddress:'ڈیلیوری کا پتہ لکھیں۔', needWhen:'ڈیلیوری کی تاریخ اور وقت منتخب کریں۔',
-    codPickup:'دکان پر ادائیگی', fitsAsk:'ہم سے پوچھیں کہ کن بائیکس پر لگتا ہے',
+    fitsAsk:'ہم سے پوچھیں کہ کن بائیکس پر لگتا ہے',
     illus:'خاکہ', illusNote:'صرف نمونہ خاکہ۔ اصل پرزہ مختلف نظر آ سکتا ہے۔', viewIllus:'{name} کا خاکہ دیکھیں',
-    pay:'ادائیگی کا طریقہ', cod:'کیش آن ڈیلیوری', wallet:'جاز کیش / ایزی پیسہ', bank:'بینک ٹرانسفر',
+    pay:'ادائیگی کا طریقہ',
     send:'واٹس ایپ پر آرڈر بھیجیں', needName:'آرڈر بھیجنے کے لیے اپنا نام لکھیں۔',
     noNumber:'دکان کا واٹس ایپ نمبر ابھی سیٹ نہیں ہے۔',
     loading:'پارٹس لوڈ ہو رہے ہیں…', loadError:'کیٹلاگ لوڈ نہیں ہو سکا۔ انٹرنیٹ چیک کر کے دوبارہ کوشش کریں۔', retry:'دوبارہ کوشش کریں',
@@ -365,7 +398,8 @@ const I18N = {
     directions:'راستہ دیکھیں', call:'کال کریں', viewPhoto:'{name} کی تصویر دیکھیں'
   }
 };
-const PAY_EN = { cod:'Cash on delivery', wallet:'JazzCash / Easypaisa', bank:'Bank transfer' };
+const PAY_EN = { shop:'Pay at the shop', easypaisa:'Easypaisa' };
+function epNumber(){ return String(CONFIG.easypaisa || '').trim(); }
 
 /* How customers can receive an order. To change or remove options, add receiveOptions / timeWindows to
    catalog-config.js (same shape as below). when: 'none' | 'optional' | 'required' = ask for a date and time window. */
@@ -817,17 +851,17 @@ function openSheet(){
 }
 function customer(){
   const pay = document.querySelector('input[name="pay"]:checked');
-  return { name:$('#f-name').value.trim(), bike:$('#f-bike').value.trim(), city:$('#f-city').value.trim(),
-           address:$('#f-address').value.trim(), pay: pay ? pay.value : 'cod',
+  return { name:$('#f-name').value.trim(), phone:$('#f-phone').value.trim(), bike:$('#f-bike').value.trim(), city:$('#f-city').value.trim(),
+           address:$('#f-address').value.trim(), pay: pay ? pay.value : '',
            recv: state.recv, date: $('#f-date').value, win: $('#f-win').value };
 }
 function saveCustomer(){ const c = customer(); delete c.date; lsSet(LS.cust, JSON.stringify(c)); }
 function restoreCustomer(){
   try{
     const c = JSON.parse(lsGet(LS.cust) || '{}');
-    $('#f-name').value = c.name || ''; $('#f-bike').value = c.bike || '';
+    $('#f-name').value = c.name || ''; $('#f-phone').value = c.phone || ''; $('#f-bike').value = c.bike || '';
     $('#f-city').value = c.city || ''; $('#f-address').value = c.address || '';
-    const r = document.querySelector('input[name="pay"][value="' + (c.pay || 'cod') + '"]'); if(r) r.checked = true;
+    const r = document.querySelector('input[name="pay"][value="' + c.pay + '"]'); if(r) r.checked = true;
     state.recv = RECEIVE.some(o => o.id === c.recv) ? c.recv : '';
     state.win = c.win || '';
   }catch(e){}
@@ -858,7 +892,17 @@ function applyRecv(){
   $('#when-win-label').textContent = t('fWhenTime') + opt;
   const note = o ? (state.lang === 'ur' ? (o.note_ur || o.note_en || '') : (o.note_en || '')) : '';
   const n = $('#recv-note'); n.textContent = note; n.hidden = !note;
-  $('#cod-label').textContent = (o && !o.address) ? t('codPickup') : t('cod');
+}
+function renderPay(){
+  const num = epNumber();
+  $('#ep-opt').hidden = !num;
+  const lab = $('#ep-label'); lab.replaceChildren(t('payEasypaisa') + ' ', h('bdi', { text:num }), CONFIG.easypaisaName ? ' – ' + CONFIG.easypaisaName : '');
+  applyPay();
+}
+function applyPay(){
+  const r = document.querySelector('input[name="pay"]:checked'), n = $('#pay-note');
+  const on = !!(r && r.value === 'easypaisa' && epNumber());
+  n.hidden = !on; n.textContent = on ? t('payEpNote', { n:epNumber() }) : '';
 }
 
 function orderText(f){
@@ -870,7 +914,7 @@ function orderText(f){
     const lt = it.price * q; total += lt;
     L.push(n++ + '. ' + it.name + (it.models.length ? ' (' + it.models.join(', ') + ')' : '') + (it.code ? ' [' + it.code + ']' : '') + ' x' + q + ' = ' + money(lt));
   }
-  L.push('', 'Parts total: ' + money(total), '', 'Name: ' + f.name);
+  L.push('', 'Parts total: ' + money(total), '', 'Name: ' + f.name, 'Contact: ' + f.phone);
   if(f.bike) L.push('My bike: ' + f.bike);
   L.push('Receive: ' + (o ? o.en : ''));
   if(o && o.address){ if(f.city) L.push('City: ' + f.city); L.push('Address: ' + f.address); }
@@ -881,16 +925,19 @@ function orderText(f){
     L.push('Preferred time: ' + [d, w].filter(Boolean).join(', '));
   }
   const pickup = !!(o && !o.address);
-  L.push('Payment: ' + ((pickup && f.pay === 'cod') ? 'Pay at the shop' : PAY_EN[f.pay]), '',
+  L.push('Payment: ' + (f.pay === 'easypaisa' ? 'Easypaisa (' + epNumber() + ')' : PAY_EN.shop), '',
          (pickup ? 'Please confirm availability.' : 'Please confirm availability and delivery charges.') + ' (Sent from the website catalog)');
   return L.join('\n');
 }
 function sendOrder(){
   const f = customer(); const err = $('#err'); const o = recvOpt();
   if(!f.name){ err.textContent = t('needName'); $('#f-name').focus(); return; }
+  if(!f.phone){ err.textContent = t('needPhone'); $('#f-phone').focus(); return; }
+  if((f.phone.match(/\d/g) || []).length < 10){ err.textContent = t('badPhone'); $('#f-phone').focus(); return; }
   if(!o){ err.textContent = t('needReceive'); const r = document.querySelector('input[name="recv"]'); if(r) r.focus(); return; }
   if(o.address && !f.address){ err.textContent = t('needAddress'); $('#f-address').focus(); return; }
   if(o.when === 'required' && (!f.date || f.win === '')){ err.textContent = t('needWhen'); (f.date ? $('#f-win') : $('#f-date')).focus(); return; }
+  if(!f.pay){ err.textContent = t('needPay'); const pr = document.querySelector('input[name="pay"]'); if(pr) pr.focus(); return; }
   if(!(CONFIG.whatsapp || '').replace(/\D/g,'')){ err.textContent = t('noNumber'); return; }
   err.textContent = '';
   saveCustomer();
@@ -914,6 +961,7 @@ function setLang(l){
   applyStatic();
   renderContact();
   renderRecv();
+  renderPay();
   if(state.loaded){ renderChips(); renderBrands(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
   else if($('#state').dataset.kind) showState($('#state').dataset.kind);
   updateBar();
@@ -938,8 +986,8 @@ function init(){
   $('#sheet').addEventListener('click', e => { if(e.target === $('#sheet')) $('#sheet').close(); });
   $('#send').addEventListener('click', sendOrder);
   $('#clear').addEventListener('click', () => { state.cart.clear(); saveCart(); document.querySelectorAll('.ctl[data-id]').forEach(c => { const it = byId.get(c.dataset.id); if(it) fillCtl(c, it); }); updateBar(); $('#sheet').close(); });
-  ['f-name','f-bike','f-city','f-address'].forEach(id => $('#' + id).addEventListener('input', saveCustomer));
-  document.querySelectorAll('input[name="pay"]').forEach(r => r.addEventListener('change', saveCustomer));
+  ['f-name','f-phone','f-bike','f-city','f-address'].forEach(id => $('#' + id).addEventListener('input', saveCustomer));
+  document.querySelectorAll('input[name="pay"]').forEach(r => r.addEventListener('change', () => { saveCustomer(); applyPay(); }));
   $('#f-win').addEventListener('change', e => { state.win = e.target.value; saveCustomer(); });
   $('#f-date').min = new Date().toISOString().slice(0, 10);
 
