@@ -11,8 +11,9 @@
 <meta name="theme-color" content="#0F1F24">
 <style>
 :root{
-  --paper:#F2F5F5; --surface:#FFFFFF; --ink:#0F1F24; --ink-2:#465960; --line:#D3DBDD;
-  --amber:#FFC20E; --ok:#0B7A4B; --low:#A85300; --out:#B3261E; --wa:#0B7A43;
+  --paper:#F4F1E8; --surface:#FFFFFF; --ink:#0B2530; --ink-2:#4C6874; --line:#DDE2E0;
+  --amber:#E8A93B; --ok:#0B7A4B; --low:#A85300; --out:#B3261E; --wa:#0B7A43;
+  --navy:#0E2A38; --navy2:#123246;
   --font:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
   --font-ur:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Noto Naskh Arabic","Segoe UI",Tahoma,sans-serif;
 }
@@ -32,8 +33,8 @@ body.has-bar{padding-bottom:92px}
 .owner p{margin:2px 0}
 
 /* header */
-.top{position:relative;background:var(--ink);color:#fff;padding:14px 0 20px}
-.top::after{content:"";position:absolute;inset-inline:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 26px,transparent 26px 40px)}
+.top{position:relative;background:linear-gradient(155deg,var(--navy) 0%,var(--navy2) 60%,#0A2029 100%);color:#fff;padding:14px 0 20px}
+.top::after{content:"";position:absolute;inset-inline:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand h1{margin:0;font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
 .brand p{margin:2px 0 0;font-size:14px;opacity:.85}
@@ -210,6 +211,80 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 .allah-desc{font-size:12.5px;color:var(--ink-2);margin-top:2px}
 .allah-desc.ur{font-size:13.5px}
 @media (prefers-reduced-motion:reduce){.allah-body{transition:none}}
+.tabbar{display:none}
+@media (max-width:760px){
+  .tabbar{display:flex;position:fixed;inset-inline:0;bottom:0;z-index:20;background:var(--navy);
+    padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 4px 8px;
+    border:0;background:none;color:#9FB6BF;font:inherit;font-size:11px;font-weight:650;cursor:pointer}
+  .tabbar button svg{width:22px;height:22px;stroke:#9FB6BF;fill:none;stroke-width:1.8}
+  .tabbar button.active{color:var(--amber)}
+  .tabbar button.active svg{stroke:var(--amber)}
+  .tabbar .tcart{position:relative}
+  .tabbar .tn{position:absolute;top:2px;right:calc(50% - 20px);min-width:16px;height:16px;padding:0 3px;border-radius:8px;
+    background:var(--amber);color:var(--navy);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .picker{padding-bottom:28px}
+  #bar{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+}
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 6px}
+@media (max-width:480px){.catgrid{grid-template-columns:repeat(3,1fr)}}
+.cattile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;border-radius:12px;
+  border:1px solid var(--line);background:var(--surface);cursor:pointer;font:inherit;position:relative}
+.cattile img{width:34px;height:34px}
+.cattile span{font-size:12px;font-weight:700;text-align:center;line-height:1.2}
+.cattile .n{position:absolute;top:6px;right:6px;font-size:10px;font-weight:800;color:var(--ink-2)}
+
+.cattile[aria-pressed="true"]{border-color:var(--amber);background:#FBF1DE;border-width:2px}
+
+#chips.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+#chips .chip{flex-direction:column;align-items:flex-start;gap:2px;min-height:82px;padding:12px 14px;position:relative;font-size:14px}
+#chips .chip .bikeicon{width:26px;height:26px;stroke:var(--ink-2);fill:none;stroke-width:1.6;margin-bottom:2px}
+#chips .chip[aria-pressed="true"]{background:var(--amber)}
+#chips .chip[aria-pressed="true"] .bikeicon{stroke:var(--ink)}
+#chips .chip[aria-pressed="true"]::after{content:"✓";position:absolute;top:8px;right:10px;font-size:13px;font-weight:800;
+  width:18px;height:18px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center}
+#chips .chip.plain{flex-direction:row;align-items:center;min-height:48px}
+#chips .chip.plain .bikeicon{display:none}
+
+.featured-wrap{margin-top:16px}
+.featured-wrap h2{margin:0 0 8px;font-size:13px;font-weight:750;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em}
+.featured{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;list-style:none;margin:0}
+.featured .part{flex:0 0 220px;scroll-snap-align:start;border:1px solid var(--line);border-radius:12px;padding:12px;border-bottom:1px solid var(--line)}
+.featured .part .row1{flex-direction:column;align-items:flex-start;gap:8px}
+.featured .part .thumbbtn,.featured .part .thumb{width:100%;height:110px}
+.featured .part .pr{align-items:flex-start;width:100%}
+
+/* hero header */
+.top.hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:4px 0 2px}
+.top.hero .logo{width:88px;height:88px;border-radius:50%;padding:0;background:radial-gradient(circle at 50% 35%,#fff 0%,#EAF0F1 72%);
+  box-shadow:0 8px 20px rgba(0,0,0,.28);margin-bottom:6px}
+.top.hero .logo img{width:100%;height:100%;object-fit:contain;padding:9px;box-sizing:border-box}
+.top.hero .brand h1{font-size:24px}
+.top.hero .brand p{font-size:14px;margin-bottom:8px}
+.top.hero .top-actions{justify-content:center;margin-top:4px}
+
+/* promo banner: bike-icon callout linking to the bike picker */
+.promo{display:flex;align-items:center;gap:14px;margin:16px 0 0;padding:16px 18px;border-radius:14px;border:0;width:100%;
+  cursor:pointer;font:inherit;text-align:start;background:linear-gradient(120deg,var(--amber),#F2C066);color:var(--ink)}
+.promo svg{width:40px;height:40px;stroke:var(--ink);fill:none;stroke-width:1.5;flex:none}
+.promo .ptext{flex:1}
+.promo .ptext b{display:block;font-size:16px;font-weight:800}
+.promo .ptext span{display:block;font-size:13px;opacity:.8;margin-top:1px}
+.promo .parrow{font-size:20px;font-weight:800}
+
+/* help banner: WhatsApp callout */
+.help-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 0;padding:14px 16px;
+  border-radius:14px;background:var(--wa);color:#fff}
+.help-banner p{margin:0;font-size:14px;font-weight:700;line-height:1.3}
+.help-banner .btn{background:#fff;color:var(--wa);min-height:40px;padding:0 16px;font-size:14px;flex:none}
+
+/* featured cards as a horizontal strip with a left thumbnail */
+.featured .part{flex:0 0 260px}
+.featured .part .row1{flex-direction:row;align-items:flex-start;gap:10px}
+.featured .part .thumbbtn,.featured .part .thumb{width:76px;height:76px;flex:none}
+.featured .part .body{flex:1;min-width:0}
+.featured .part .pr{align-items:flex-end;flex-direction:row;justify-content:space-between;width:100%;margin-top:8px}
 </style>
 </head>
 <body>
@@ -218,7 +293,7 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 
 <div id="owner" class="owner" hidden></div>
 
-<header class="top">
+<header class="top hero">
   <div class="wrap">
     <div class="brand">
       <span class="logo" id="logo-wrap" hidden><img id="logo-img" alt=""></span>
@@ -248,6 +323,27 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
       </div>
     </section>
   </div>
+  <div class="wrap">
+    <button type="button" class="promo" id="promo-banner" onclick="document.getElementById('pick-h').scrollIntoView({behavior:'smooth',block:'start'})">
+      <svg viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.2"/><circle cx="18.5" cy="17" r="3.2"/><path d="M5.5 17 9 9h4l3 4h3.5M9 9 7.5 6H5"/><path d="M13 9l2 4"/></svg>
+      <span class="ptext"><b data-i18n="promoTitle"></b><span data-i18n="promoSub"></span></span>
+      <span class="parrow" aria-hidden="true">&#8250;</span>
+    </button>
+  </div>
+  <section class="wrap featured-wrap" id="featured-wrap" hidden aria-labelledby="feat-h">
+    <h2 id="feat-h" data-i18n="featuredTitle"></h2>
+    <ul class="featured" id="featured" role="list"></ul>
+  </section>
+  <div class="wrap" id="help-banner-wrap" hidden>
+    <div class="help-banner">
+      <p data-i18n="helpBanner"></p>
+      <a id="help-chat" class="btn" href="#" target="_blank" rel="noopener" data-i18n="chatNow"></a>
+    </div>
+  </div>
+  <section class="wrap" style="padding-top:16px" id="catgrid-wrap" hidden aria-labelledby="cat-h">
+    <h2 id="cat-h" data-i18n="pickCategory" style="margin:0 0 2px;font-size:13px;font-weight:750;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em"></h2>
+    <div class="catgrid" id="catgrid" role="group" aria-labelledby="cat-h"></div>
+  </section>
   <section class="picker wrap" aria-labelledby="pick-h">
     <h2 id="pick-h" data-i18n="pickBike"></h2>
     <div id="chips" class="chips" role="group" aria-labelledby="pick-h"></div>
@@ -287,6 +383,14 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
   </div>
 </footer>
 
+<nav class="tabbar" aria-label="Main">
+  <button type="button" class="active" id="tab-shop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg><span data-i18n="tabShop"></span></button>
+  <button type="button" id="tab-cat" onclick="document.getElementById('pick-h').scrollIntoView({behavior:'smooth',block:'start'})">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span data-i18n="tabCategories"></span></button>
+  <button type="button" class="tcart" id="tab-cart" onclick="document.getElementById('review').click()">
+    <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span data-i18n="tabCart"></span><span class="tn num" id="tabcartn" hidden>0</span></button>
+</nav>
 <div id="bar" class="bar" hidden>
   <div class="bar-in">
     <div class="bar-info" role="status">
@@ -375,6 +479,8 @@ const I18N = {
     searchLabel:'Search parts', search:'Part name, brand or code', inStockOnly:'In stock only',
     countAll:'{n} parts', countBike:'{n} parts for {bike}', countBrand:'{n} parts by {brand}', countBoth:'{n} parts for {bike} by {brand}',
     pickBrand:'Brand', allBrands:'All brands', moreBrands:'More brands', fewerBrands:'Fewer brands',
+    pickCategory:'Shop by category', tabShop:'Shop', tabCategories:'Categories', tabCart:'Cart', featuredTitle:"This week's picks",
+    promoTitle:'Find parts for your bike', promoSub:'Pick your model to see what fits', helpBanner:'Need help finding parts? Chat with us on WhatsApp!', chatNow:'Chat now',
     fits:'Fits', fitsAll:'All bikes',
     in:'In stock', low:'Only {n} left', out:'Out of stock',
     add:'Add to order', askPhoto:'Ask for photo', askPart:'Ask about this part', askStock:'Ask availability', askPrice:'Ask for price',
@@ -407,6 +513,8 @@ const I18N = {
     searchLabel:'پارٹس تلاش کریں', search:'پارٹ کا نام، برانڈ یا کوڈ', inStockOnly:'صرف دستیاب پارٹس',
     countAll:'{n} پارٹس', countBike:'{bike} کے لیے {n} پارٹس', countBrand:'{brand} کے {n} پارٹس', countBoth:'{bike} کے لیے {brand} کے {n} پارٹس',
     pickBrand:'برانڈ', allBrands:'تمام برانڈز', moreBrands:'مزید برانڈز', fewerBrands:'کم برانڈز',
+    pickCategory:'کیٹیگری کے مطابق دیکھیں', tabShop:'شاپ', tabCategories:'کیٹیگریز', tabCart:'کارٹ', featuredTitle:'اس ہفتے کا انتخاب',
+    promoTitle:'اپنی بائیک کے پارٹس تلاش کریں', promoSub:'اپنا ماڈل منتخب کریں', helpBanner:'پارٹس ڈھونڈنے میں مدد چاہیے؟ واٹس ایپ پر رابطہ کریں!', chatNow:'ابھی چیٹ کریں',
     fits:'موزوں برائے', fitsAll:'تمام موٹر سائیکلیں',
     in:'دستیاب', low:'صرف {n} باقی', out:'اسٹاک ختم',
     add:'آرڈر میں شامل کریں', askPhoto:'تصویر منگوائیں', askPart:'اس پارٹ کے بارے میں پوچھیں', askStock:'دستیابی پوچھیں', askPrice:'قیمت پوچھیں',
@@ -462,7 +570,7 @@ const LS = { cart:'malikautoz_catalog_cart_v1', cust:'malikautoz_catalog_custome
 /* ===== State ===== */
 const $ = s => document.querySelector(s);
 const state = { lang:'en', items:[], bikes:[], bike:'', q:'', inStockOnly:false, page:1,
-                showAllBikes:false, brands:[], brand:'', showAllBrands:false, recv:'', win:'', cart:new Map(), updated:'', sample:false, loaded:false };
+                showAllBikes:false, brands:[], brand:'', showAllBrands:false, cats:[], cat:'', recv:'', win:'', cart:new Map(), updated:'', sample:false, loaded:false };
 let byId = new Map();
 
 function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
@@ -473,6 +581,7 @@ function t(key, vars){
   if(vars) for(const k in vars) s = s.split('{'+k+'}').join(String(vars[k]));
   return s;
 }
+function svgEl(str){ const d = document.createElement('div'); d.innerHTML = str; return d.firstElementChild; }
 function h(tag, attrs){
   const el = document.createElement(tag);
   if(attrs) for(const k in attrs){
@@ -520,7 +629,7 @@ function normalize(r, i){
 
   return {
     id: r.id != null && r.id !== '' ? String(r.id) : 'i' + i,
-    name: String(r.name).trim(), models, universal, bikeKeys: models.map(bikeKey), brandKey: r.company ? bikeKey(r.company) : '',
+    name: String(r.name).trim(), models, universal, bikeKeys: models.map(bikeKey), brandKey: r.company ? bikeKey(r.company) : '', catKey: r.category ? bikeKey(r.category) : '',
     company: r.company ? String(r.company) : '', grade: r.grade ? String(r.grade) : '', category: r.category ? String(r.category) : '',
     code: r.code ? String(r.code) : '', image: r.image ? String(r.image) : '',
     price, stock, status, maxQty, canOrder: status !== 'out' && price !== null,
@@ -535,6 +644,16 @@ function buildBikes(){
     map.get(k).count++;
   });
   state.bikes = [...map.values()].sort((a,b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+const CAT_ART = { engineparts:'piston', electrical:'lightning', bodyparts:'cover', brakes:'brake_shoe', 'tyres&tubes':'tyre', 'oils&lubricants':'bottle', other:'hardware' };
+function buildCats(){
+  const map = new Map();
+  for(const it of state.items){
+    if(!it.catKey) continue;
+    if(!map.has(it.catKey)) map.set(it.catKey, { key:it.catKey, label:'', count:0 });
+    const c = map.get(it.catKey); c.count++; if(!c.label) c.label = it.category;
+  }
+  state.cats = [...map.values()].sort((a,b) => b.count - a.count || a.label.localeCompare(b.label));
 }
 function buildBrands(){
   const map = new Map();
@@ -558,8 +677,8 @@ async function load(){
     state.updated = (!Array.isArray(data) && data.updated) || '';
     state.sample = !Array.isArray(data) && !!data._sample;
     state.loaded = true;
-    buildBikes(); buildBrands(); pruneCart();
-    hideState(); renderChips(); renderBrands(); renderList(); renderFooter(); updateBar(); renderOwner();
+    buildBikes(); buildBrands(); buildCats(); pruneCart();
+    hideState(); renderChips(); renderBrands(); renderCatGrid(); renderFeatured(); renderList(); renderFooter(); updateBar(); renderOwner();
   }catch(e){
     showState('error');
   }
@@ -572,6 +691,7 @@ function filtered(){
   return state.items.filter(it => {
     if(state.bike && !(it.universal || it.bikeKeys.includes(state.bike))) return false;
     if(state.brand && it.brandKey !== state.brand) return false;
+    if(state.cat && it.catKey !== state.cat) return false;
     if(state.inStockOnly && it.status === 'out') return false;
     return toks.every(tk => it.hay.includes(tk) || it.compact.includes(tk.replace(/[\s\-_.]+/g,'')));
   }).sort((a,b) => rank(a.status) - rank(b.status) || a.name.localeCompare(b.name));
@@ -580,11 +700,12 @@ function filtered(){
 /* ===== Rendering ===== */
 function fitsText(it){ return it.universal ? t('fitsAll') : (it.models.length ? it.models.join(', ') : t('fitsAsk')); }
 
+const BIKE_ICON = '<svg class="bikeicon" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.2"/><circle cx="18.5" cy="17" r="3.2"/><path d="M5.5 17 9 9h4l3 4h3.5M9 9 7.5 6H5"/><path d="M13 9l2 4"/></svg>';
 function renderChips(){
   const box = $('#chips'); box.replaceChildren();
   const mk = (key, label, n, plain) => h('button', { class:'chip' + (plain ? ' plain' : ''), type:'button', 'data-key':key,
       'aria-pressed': String(state.bike === key), onclick:() => selectBike(key) },
-      label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
+      plain ? null : svgEl(BIKE_ICON), label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
   box.append(mk('', t('allParts'), state.items.length || null));
   const shown = state.showAllBikes ? state.bikes : state.bikes.slice(0, CONFIG.maxBikeChips);
   shown.forEach(b => box.append(mk(b.key, b.label, b.count)));
@@ -593,6 +714,30 @@ function renderChips(){
       onclick:() => { state.showAllBikes = !state.showAllBikes; renderChips(); const b = $('#morebikes'); if(b) b.focus(); },
       text: state.showAllBikes ? t('fewerBikes') : t('moreBikes') }));
   }
+}
+function renderFeatured(){
+  const wrap = $('#featured-wrap'), box = $('#featured'); if(!wrap || !box) return;
+  const picks = state.items.filter(it => it.canOrder && it.status !== 'out').sort((a, b) => a.stock - b.stock).slice(0, 8);
+  wrap.hidden = picks.length < 3;
+  if(picks.length < 3) return;
+  box.replaceChildren();
+  picks.forEach(it => box.append(partRow(it)));
+  observePhotos();
+}
+function renderCatGrid(){
+  const wrap = $('#catgrid-wrap'), box = $('#catgrid'); if(!wrap || !box) return;
+  wrap.hidden = state.cats.length < 2;
+  if(state.cats.length < 2) return;
+  box.replaceChildren();
+  state.cats.forEach(c => box.append(h('button', { class:'cattile', type:'button', 'data-key':c.key,
+      'aria-pressed': String(state.cat === c.key), onclick:() => selectCat(c.key) },
+      h('img', { src: window.PartArt ? PartArt.dataUri(CAT_ART[c.key] || 'hardware') : '', alt:'' }),
+      h('span', { text:c.label }), h('span', { class:'n', text:String(c.count) }))));
+}
+function selectCat(key){
+  state.cat = state.cat === key ? '' : key; state.page = 1;
+  document.querySelectorAll('#catgrid .cattile').forEach(t => t.setAttribute('aria-pressed', String(t.dataset.key === state.cat)));
+  renderList();
 }
 function renderBrands(){
   const box = $('#brands'); box.replaceChildren();
@@ -758,7 +903,7 @@ function loadPhoto(row){
 }
 function observePhotos(){
   if(photoObserver) photoObserver.disconnect();
-  const rows = document.querySelectorAll('#list .part');
+  const rows = document.querySelectorAll('#list .part, #featured .part');
   if(!('IntersectionObserver' in window)){ rows.forEach(loadPhoto); return; }
   photoObserver = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ photoObserver.unobserve(e.target); loadPhoto(e.target); } });
@@ -896,6 +1041,7 @@ function updateBar(){
   document.body.classList.toggle('has-bar', qty > 0);
   $('#bar-count').textContent = t('inOrder', { n:qty });
   $('#bar-total').textContent = money(total);
+  const tn = $('#tabcartn'); if(tn){ tn.hidden = qty === 0; tn.textContent = String(qty); }
 }
 
 /* ===== Order sheet ===== */
@@ -1030,7 +1176,7 @@ function setLang(l){
   renderContact();
   renderRecv();
   renderPay();
-  if(state.loaded){ renderChips(); renderBrands(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
+  if(state.loaded){ renderChips(); renderBrands(); renderCatGrid(); renderFeatured(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
   else if($('#state').dataset.kind) showState($('#state').dataset.kind);
   updateBar();
 }
@@ -1042,6 +1188,8 @@ function init(){
   setupBrand();
   initAllah();
   $('#chat').setAttribute('href', waLink('Assalam o Alaikum, I have a question about a spare part.'));
+  $('#help-chat').setAttribute('href', waLink('Assalam o Alaikum, I need help finding a part.'));
+  $('#help-banner-wrap').hidden = !(CONFIG.whatsapp || '').replace(/\D/g, '');
   const saved = lsGet(LS.lang);
   state.lang = (saved === 'ur' || saved === 'en') ? saved : ((navigator.language || '').toLowerCase().indexOf('ur') === 0 ? 'ur' : 'en');
   loadCart(); restoreCustomer();
