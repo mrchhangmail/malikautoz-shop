@@ -243,7 +243,8 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 
 #chips.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
 #chips .chip{flex-direction:column;align-items:flex-start;gap:2px;min-height:82px;padding:12px 14px;position:relative;font-size:14px}
-#chips .chip .bikeicon{width:34px;height:34px;margin-bottom:2px}
+#chips .chip .bikebadge{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+#chips .chip .bikebadge svg{width:24px;height:24px}
 #chips .chip[aria-pressed="true"]{background:var(--amber)}
 #chips .chip[aria-pressed="true"]::after{content:"✓";position:absolute;top:8px;right:10px;font-size:13px;font-weight:800;
   width:18px;height:18px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center}
@@ -685,7 +686,7 @@ function filtered(){
 function fitsText(it){ return it.universal ? t('fitsAll') : (it.models.length ? it.models.join(', ') : t('fitsAsk')); }
 
 function bikeIconSvg(color, hub){
-  hub = hub || 'rgba(255,255,255,.75)';
+  hub = hub || 'rgba(255,255,255,.4)';
   return '<svg class="bikeicon" viewBox="0 0 64 40" aria-hidden="true">' +
     '<g fill="none" stroke="' + color + '" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">' +
     '<path d="M15 27 L15 18 Q15 12 23 12 L33 12 L40 21 L49 27"/><path d="M33 12 L29 7"/><path d="M40 21 L49 21"/></g>' +
@@ -693,16 +694,19 @@ function bikeIconSvg(color, hub){
     '<circle cx="15" cy="28" r="10" fill="' + color + '"/><circle cx="15" cy="28" r="3.4" fill="' + hub + '"/>' +
     '<circle cx="49" cy="28" r="10" fill="' + color + '"/><circle cx="49" cy="28" r="3.4" fill="' + hub + '"/></svg>';
 }
-const BIKE_COLORS = ['#2F6FED', '#21935A', '#C0392B', '#7C5CD1', '#1B8F96', '#B5651D', '#D14A8C', '#4C6874'];
+const BIKE_COLORS = ['#E8A93B', '#2F6FED', '#21935A', '#C0392B', '#7C5CD1', '#1B8F96', '#B5651D', '#D14A8C', '#4C6874'];
 function bikeColor(key){
   let h = 0; for(let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0;
   return BIKE_COLORS[h % BIKE_COLORS.length];
+}
+function bikeBadge(key){
+  return h('span', { class:'bikebadge', style:'background:' + (key ? bikeColor(key) : '#0B2530') }, svgEl(bikeIconSvg('#fff')));
 }
 function renderChips(){
   const box = $('#chips'); box.replaceChildren();
   const mk = (key, label, n, plain) => h('button', { class:'chip' + (plain ? ' plain' : ''), type:'button', 'data-key':key,
       'aria-pressed': String(state.bike === key), onclick:() => selectBike(key) },
-      plain ? null : svgEl(bikeIconSvg(key ? bikeColor(key) : '#0B2530')), label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
+      plain ? null : bikeBadge(key), label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
   box.append(mk('', t('allParts'), state.items.length || null));
   const shown = state.showAllBikes ? state.bikes : state.bikes.slice(0, CONFIG.maxBikeChips);
   shown.forEach(b => box.append(mk(b.key, b.label, b.count)));
