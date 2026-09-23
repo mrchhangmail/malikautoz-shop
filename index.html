@@ -316,7 +316,7 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
   </div>
   <div class="wrap">
     <button type="button" class="promo" id="promo-banner" onclick="document.getElementById('pick-h').scrollIntoView({behavior:'smooth',block:'start'})">
-      <svg viewBox="0 0 214 112" aria-hidden="true"><path fill="#0B2530" d="M32 74 Q24 56 44 50 Q60 47 70 56 L64 62 Q52 56 42 58 Q30 60 34 72 Z"/><path fill="#0B2530" d="M62 56 L150 56 Q166 56 176 46 Q182 50 174 58 L162 62 L162 74 L58 74 L58 62 Z"/><path fill="#0B2530" d="M62 56 Q64 44 76 40 L82 41 Q78 34 83 24 Q88 22 87 29 Q85 38 91 42 L96 46 L90 56 Z"/><path fill="#0B2530" d="M90 56 L96 46 Q106 38 120 40 Q132 42 136 50 L150 52 Q166 52 178 44 Q184 42 180 48 Q170 58 154 58 L96 58 Z"/><circle cx="100" cy="65" r="9" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M68 58 L112 74" stroke="#fff" stroke-width="2.4" fill="none"/><circle cx="55" cy="80" r="29" fill="#0B2530"/><circle cx="55" cy="80" r="20" fill="#fff"/><circle cx="55" cy="80" r="12" fill="#0B2530"/><circle cx="55" cy="80" r="3" fill="#fff"/><circle cx="160" cy="80" r="29" fill="#0B2530"/><circle cx="160" cy="80" r="20" fill="#fff"/><circle cx="160" cy="80" r="12" fill="#0B2530"/><circle cx="160" cy="80" r="3" fill="#fff"/></svg>
+      <svg viewBox="0 0 200 118" aria-hidden="true"><g fill="none" stroke="#0B2530" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><circle cx="45" cy="85" r="27"/><path d="M45 85 L45 62 M45 85 L26 96 M45 85 L64 96"/><circle cx="155" cy="85" r="27"/><path d="M155 85 L155 62 M155 85 L136 96 M155 85 L174 96"/><path d="M40 55 L54 48 L54 60 Z"/><path d="M70 68 Q70 50 88 50 L128 50 Q140 50 140 62 Q140 70 128 70 L82 70 Q70 70 70 68 Z"/><path d="M72 59 L138 59"/><circle cx="103" cy="80" r="11"/><path d="M78 69 Q60 74 47 82"/><path d="M128 69 Q145 74 153 82"/><path d="M132 50 Q140 40 150 36"/><path d="M148 30 L166 30"/><path d="M137 46 L137 58"/></g></svg>
       <span class="ptext"><b data-i18n="promoTitle"></b><span data-i18n="promoSub"></span></span>
       <span class="parrow" aria-hidden="true">&#8250;</span>
     </button>
@@ -685,21 +685,20 @@ function filtered(){
 /* ===== Rendering ===== */
 function fitsText(it){ return it.universal ? t('fitsAll') : (it.models.length ? it.models.join(', ') : t('fitsAsk')); }
 
-/* Motorbike glyph, hand-traced to match the shop owner's reference (sport-naked bike silhouette:
-   nose/windscreen tab, tank, seat, tail flick, chunky double-ring wheels, engine detail). Original artwork. */
-function bikeIconSvg(color, hub){
-  hub = hub || '#fff';
-  return '<svg class="bikeicon" viewBox="0 0 214 112" aria-hidden="true">' +
-    '<path fill="' + color + '" d="M32 74 Q24 56 44 50 Q60 47 70 56 L64 62 Q52 56 42 58 Q30 60 34 72 Z"/>' +
-    '<path fill="' + color + '" d="M62 56 L150 56 Q166 56 176 46 Q182 50 174 58 L162 62 L162 74 L58 74 L58 62 Z"/>' +
-    '<path fill="' + color + '" d="M62 56 Q64 44 76 40 L82 41 Q78 34 83 24 Q88 22 87 29 Q85 38 91 42 L96 46 L90 56 Z"/>' +
-    '<path fill="' + color + '" d="M90 56 L96 46 Q106 38 120 40 Q132 42 136 50 L150 52 Q166 52 178 44 Q184 42 180 48 Q170 58 154 58 L96 58 Z"/>' +
-    '<circle cx="100" cy="65" r="9" fill="none" stroke="' + hub + '" stroke-width="2.6"/>' +
-    '<path d="M68 58 L112 74" stroke="' + hub + '" stroke-width="2.4" fill="none"/>' +
-    '<circle cx="55" cy="80" r="29" fill="' + color + '"/><circle cx="55" cy="80" r="20" fill="' + hub + '"/>' +
-    '<circle cx="55" cy="80" r="12" fill="' + color + '"/><circle cx="55" cy="80" r="3" fill="' + hub + '"/>' +
-    '<circle cx="160" cy="80" r="29" fill="' + color + '"/><circle cx="160" cy="80" r="20" fill="' + hub + '"/>' +
-    '<circle cx="160" cy="80" r="12" fill="' + color + '"/><circle cx="160" cy="80" r="3" fill="' + hub + '"/></svg>';
+/* Motorbike glyph, hand-traced to match the shop owner's second reference (rounded line-art style:
+   spoked wheels, seat/tank hump, engine circle, handlebar with grip, front fender flag). Original artwork. */
+function bikeIconSvg(color){
+  return '<svg class="bikeicon" viewBox="0 0 200 118" aria-hidden="true">' +
+    '<g fill="none" stroke="' + color + '" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">' +
+    '<circle cx="45" cy="85" r="27"/><path d="M45 85 L45 62 M45 85 L26 96 M45 85 L64 96"/>' +
+    '<circle cx="155" cy="85" r="27"/><path d="M155 85 L155 62 M155 85 L136 96 M155 85 L174 96"/>' +
+    '<path d="M40 55 L54 48 L54 60 Z"/>' +
+    '<path d="M70 68 Q70 50 88 50 L128 50 Q140 50 140 62 Q140 70 128 70 L82 70 Q70 70 70 68 Z"/>' +
+    '<path d="M72 59 L138 59"/>' +
+    '<circle cx="103" cy="80" r="11"/>' +
+    '<path d="M78 69 Q60 74 47 82"/><path d="M128 69 Q145 74 153 82"/>' +
+    '<path d="M132 50 Q140 40 150 36"/><path d="M148 30 L166 30"/><path d="M137 46 L137 58"/>' +
+    '</g></svg>';
 }
 const BIKE_COLORS = ['#E8A93B', '#2F6FED', '#21935A', '#C0392B', '#7C5CD1', '#1B8F96', '#B5651D', '#D14A8C', '#4C6874'];
 function bikeColor(key){
@@ -708,7 +707,7 @@ function bikeColor(key){
 }
 function bikeBadge(key){
   const bg = key ? bikeColor(key) : '#0B2530';
-  return h('span', { class:'bikebadge', style:'background:' + bg }, svgEl(bikeIconSvg('#fff', bg)));
+  return h('span', { class:'bikebadge', style:'background:' + bg }, svgEl(bikeIconSvg('#fff')));
 }
 function renderChips(){
   const box = $('#chips'); box.replaceChildren();
