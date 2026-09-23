@@ -192,8 +192,8 @@ dialog.photo p{margin:10px 0;font-weight:700}
 @media (pointer:coarse){#sheet .field input,#sheet .field textarea,#sheet .field select{font-size:16px}}   /* keeps phones from zooming in on focus */
 
 /* Names of Allah */
-.allah-wrap{position:relative;z-index:1;margin-top:14px}
-.allah{background:var(--surface);border:1px solid var(--line);border-inline-start:5px solid var(--amber);border-radius:10px;padding:10px 14px 12px}
+.allah-wrap{position:relative;z-index:1;margin-top:10px}
+.allah{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--amber);border-radius:9px;padding:7px 12px 8px}
 .allah-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .allah-top h2{margin:0;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-2);text-transform:uppercase}
 html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13px}
@@ -201,15 +201,15 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 .allah-body{transition:opacity .4s;text-align:center}
 .allah-body.swap{opacity:0}
 .allah-body p{margin:0}
-.allah-ar{font-family:"Amiri","Noto Naskh Arabic","Scheherazade New","Traditional Arabic","Geeza Pro","Segoe UI",serif;font-size:36px;line-height:1.6;color:var(--ink)}
-.allah-tr{font-size:15px;font-weight:750;font-family:var(--font)}
-.allah-mean{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-size:14px}
+.allah-ar{font-family:"Amiri","Noto Naskh Arabic","Scheherazade New","Traditional Arabic","Geeza Pro","Segoe UI",serif;font-size:24px;line-height:1.35;color:var(--ink)}
+.allah-tr{font-size:12.5px;font-weight:750;font-family:var(--font)}
+.allah-mean{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:0 8px;margin-top:2px;font-size:12px}
 .allah-mean .sep{color:var(--ink-2)}
 #allah-en,.allah-desc:not(.ur){font-family:var(--font)}
 #allah-ur,.allah-desc.ur{font-family:var(--font-ur);line-height:1.9}
 #allah-ur{font-size:16px}
-.allah-desc{font-size:12.5px;color:var(--ink-2);margin-top:2px}
-.allah-desc.ur{font-size:13.5px}
+.allah-desc{font-size:10.5px;color:var(--ink-2);margin-top:1px}
+.allah-desc.ur{font-size:11.5px}
 @media (prefers-reduced-motion:reduce){.allah-body{transition:none}}
 .tabbar{display:none}
 @media (max-width:760px){
@@ -226,6 +226,10 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
   body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
   .picker{padding-bottom:28px}
   #bar{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  #help-banner-wrap{position:fixed;inset-inline:0;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:16;margin:0}
+  #help-banner-wrap .help-banner{margin:0;border-radius:0}
+  body.has-bar #help-banner-wrap{display:none}
+  body.has-help-fixed{padding-bottom:calc(128px + env(safe-area-inset-bottom,0px))}
 }
 .catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 6px}
 @media (max-width:480px){.catgrid{grid-template-columns:repeat(3,1fr)}}
@@ -239,21 +243,13 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 
 #chips.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
 #chips .chip{flex-direction:column;align-items:flex-start;gap:2px;min-height:82px;padding:12px 14px;position:relative;font-size:14px}
-#chips .chip .bikeicon{width:26px;height:26px;stroke:var(--ink-2);fill:none;stroke-width:1.6;margin-bottom:2px}
+#chips .chip .bikeicon{width:34px;height:34px;margin-bottom:2px}
 #chips .chip[aria-pressed="true"]{background:var(--amber)}
-#chips .chip[aria-pressed="true"] .bikeicon{stroke:var(--ink)}
 #chips .chip[aria-pressed="true"]::after{content:"✓";position:absolute;top:8px;right:10px;font-size:13px;font-weight:800;
   width:18px;height:18px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center}
 #chips .chip.plain{flex-direction:row;align-items:center;min-height:48px}
 #chips .chip.plain .bikeicon{display:none}
 
-.featured-wrap{margin-top:16px}
-.featured-wrap h2{margin:0 0 8px;font-size:13px;font-weight:750;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em}
-.featured{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;list-style:none;margin:0}
-.featured .part{flex:0 0 220px;scroll-snap-align:start;border:1px solid var(--line);border-radius:12px;padding:12px;border-bottom:1px solid var(--line)}
-.featured .part .row1{flex-direction:column;align-items:flex-start;gap:8px}
-.featured .part .thumbbtn,.featured .part .thumb{width:100%;height:110px}
-.featured .part .pr{align-items:flex-start;width:100%}
 
 /* hero header */
 .top.hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:4px 0 2px}
@@ -267,7 +263,7 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 /* promo banner: bike-icon callout linking to the bike picker */
 .promo{display:flex;align-items:center;gap:14px;margin:16px 0 0;padding:16px 18px;border-radius:14px;border:0;width:100%;
   cursor:pointer;font:inherit;text-align:start;background:linear-gradient(120deg,var(--amber),#F2C066);color:var(--ink)}
-.promo svg{width:40px;height:40px;stroke:var(--ink);fill:none;stroke-width:1.5;flex:none}
+.promo svg{width:44px;height:44px;flex:none}
 .promo .ptext{flex:1}
 .promo .ptext b{display:block;font-size:16px;font-weight:800}
 .promo .ptext span{display:block;font-size:13px;opacity:.8;margin-top:1px}
@@ -279,12 +275,6 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
 .help-banner p{margin:0;font-size:14px;font-weight:700;line-height:1.3}
 .help-banner .btn{background:#fff;color:var(--wa);min-height:40px;padding:0 16px;font-size:14px;flex:none}
 
-/* featured cards as a horizontal strip with a left thumbnail */
-.featured .part{flex:0 0 260px}
-.featured .part .row1{flex-direction:row;align-items:flex-start;gap:10px}
-.featured .part .thumbbtn,.featured .part .thumb{width:76px;height:76px;flex:none}
-.featured .part .body{flex:1;min-width:0}
-.featured .part .pr{align-items:flex-end;flex-direction:row;justify-content:space-between;width:100%;margin-top:8px}
 </style>
 </head>
 <body>
@@ -325,15 +315,11 @@ html[lang="ur"] .allah-top h2{letter-spacing:0;text-transform:none;font-size:13p
   </div>
   <div class="wrap">
     <button type="button" class="promo" id="promo-banner" onclick="document.getElementById('pick-h').scrollIntoView({behavior:'smooth',block:'start'})">
-      <svg viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.2"/><circle cx="18.5" cy="17" r="3.2"/><path d="M5.5 17 9 9h4l3 4h3.5M9 9 7.5 6H5"/><path d="M13 9l2 4"/></svg>
+      <svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="#0B2530" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 27 L15 18 Q15 12 23 12 L33 12 L40 21 L49 27"/><path d="M33 12 L29 7"/><path d="M40 21 L49 21"/></g><circle cx="38.5" cy="12.5" r="2.4" fill="#0B2530"/><circle cx="15" cy="28" r="10" fill="#0B2530"/><circle cx="15" cy="28" r="3.4" fill="rgba(255,255,255,.75)"/><circle cx="49" cy="28" r="10" fill="#0B2530"/><circle cx="49" cy="28" r="3.4" fill="rgba(255,255,255,.75)"/></svg>
       <span class="ptext"><b data-i18n="promoTitle"></b><span data-i18n="promoSub"></span></span>
       <span class="parrow" aria-hidden="true">&#8250;</span>
     </button>
   </div>
-  <section class="wrap featured-wrap" id="featured-wrap" hidden aria-labelledby="feat-h">
-    <h2 id="feat-h" data-i18n="featuredTitle"></h2>
-    <ul class="featured" id="featured" role="list"></ul>
-  </section>
   <div class="wrap" id="help-banner-wrap" hidden>
     <div class="help-banner">
       <p data-i18n="helpBanner"></p>
@@ -479,8 +465,7 @@ const I18N = {
     searchLabel:'Search parts', search:'Part name, brand or code', inStockOnly:'In stock only',
     countAll:'{n} parts', countBike:'{n} parts for {bike}', countBrand:'{n} parts by {brand}', countBoth:'{n} parts for {bike} by {brand}',
     pickBrand:'Brand', allBrands:'All brands', moreBrands:'More brands', fewerBrands:'Fewer brands',
-    pickCategory:'Shop by category', tabShop:'Shop', tabCategories:'Categories', tabCart:'Cart', featuredTitle:"This week's picks",
-    promoTitle:'Find parts for your bike', promoSub:'Pick your model to see what fits', helpBanner:'Need help finding parts? Chat with us on WhatsApp!', chatNow:'Chat now',
+    pickCategory:'Shop by category', tabShop:'Shop', tabCategories:'Categories', tabCart:'Cart', promoTitle:'Find parts for your bike', promoSub:'Pick your model to see what fits', helpBanner:'Need help finding parts? Chat with us on WhatsApp!', chatNow:'Chat now',
     fits:'Fits', fitsAll:'All bikes',
     in:'In stock', low:'Only {n} left', out:'Out of stock',
     add:'Add to order', askPhoto:'Ask for photo', askPart:'Ask about this part', askStock:'Ask availability', askPrice:'Ask for price',
@@ -513,8 +498,7 @@ const I18N = {
     searchLabel:'پارٹس تلاش کریں', search:'پارٹ کا نام، برانڈ یا کوڈ', inStockOnly:'صرف دستیاب پارٹس',
     countAll:'{n} پارٹس', countBike:'{bike} کے لیے {n} پارٹس', countBrand:'{brand} کے {n} پارٹس', countBoth:'{bike} کے لیے {brand} کے {n} پارٹس',
     pickBrand:'برانڈ', allBrands:'تمام برانڈز', moreBrands:'مزید برانڈز', fewerBrands:'کم برانڈز',
-    pickCategory:'کیٹیگری کے مطابق دیکھیں', tabShop:'شاپ', tabCategories:'کیٹیگریز', tabCart:'کارٹ', featuredTitle:'اس ہفتے کا انتخاب',
-    promoTitle:'اپنی بائیک کے پارٹس تلاش کریں', promoSub:'اپنا ماڈل منتخب کریں', helpBanner:'پارٹس ڈھونڈنے میں مدد چاہیے؟ واٹس ایپ پر رابطہ کریں!', chatNow:'ابھی چیٹ کریں',
+    pickCategory:'کیٹیگری کے مطابق دیکھیں', tabShop:'شاپ', tabCategories:'کیٹیگریز', tabCart:'کارٹ', promoTitle:'اپنی بائیک کے پارٹس تلاش کریں', promoSub:'اپنا ماڈل منتخب کریں', helpBanner:'پارٹس ڈھونڈنے میں مدد چاہیے؟ واٹس ایپ پر رابطہ کریں!', chatNow:'ابھی چیٹ کریں',
     fits:'موزوں برائے', fitsAll:'تمام موٹر سائیکلیں',
     in:'دستیاب', low:'صرف {n} باقی', out:'اسٹاک ختم',
     add:'آرڈر میں شامل کریں', askPhoto:'تصویر منگوائیں', askPart:'اس پارٹ کے بارے میں پوچھیں', askStock:'دستیابی پوچھیں', askPrice:'قیمت پوچھیں',
@@ -678,7 +662,7 @@ async function load(){
     state.sample = !Array.isArray(data) && !!data._sample;
     state.loaded = true;
     buildBikes(); buildBrands(); buildCats(); pruneCart();
-    hideState(); renderChips(); renderBrands(); renderCatGrid(); renderFeatured(); renderList(); renderFooter(); updateBar(); renderOwner();
+    hideState(); renderChips(); renderBrands(); renderCatGrid(); renderList(); renderFooter(); updateBar(); renderOwner();
   }catch(e){
     showState('error');
   }
@@ -700,12 +684,25 @@ function filtered(){
 /* ===== Rendering ===== */
 function fitsText(it){ return it.universal ? t('fitsAll') : (it.models.length ? it.models.join(', ') : t('fitsAsk')); }
 
-const BIKE_ICON = '<svg class="bikeicon" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.2"/><circle cx="18.5" cy="17" r="3.2"/><path d="M5.5 17 9 9h4l3 4h3.5M9 9 7.5 6H5"/><path d="M13 9l2 4"/></svg>';
+function bikeIconSvg(color, hub){
+  hub = hub || 'rgba(255,255,255,.75)';
+  return '<svg class="bikeicon" viewBox="0 0 64 40" aria-hidden="true">' +
+    '<g fill="none" stroke="' + color + '" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">' +
+    '<path d="M15 27 L15 18 Q15 12 23 12 L33 12 L40 21 L49 27"/><path d="M33 12 L29 7"/><path d="M40 21 L49 21"/></g>' +
+    '<circle cx="38.5" cy="12.5" r="2.4" fill="' + color + '"/>' +
+    '<circle cx="15" cy="28" r="10" fill="' + color + '"/><circle cx="15" cy="28" r="3.4" fill="' + hub + '"/>' +
+    '<circle cx="49" cy="28" r="10" fill="' + color + '"/><circle cx="49" cy="28" r="3.4" fill="' + hub + '"/></svg>';
+}
+const BIKE_COLORS = ['#2F6FED', '#21935A', '#C0392B', '#7C5CD1', '#1B8F96', '#B5651D', '#D14A8C', '#4C6874'];
+function bikeColor(key){
+  let h = 0; for(let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0;
+  return BIKE_COLORS[h % BIKE_COLORS.length];
+}
 function renderChips(){
   const box = $('#chips'); box.replaceChildren();
   const mk = (key, label, n, plain) => h('button', { class:'chip' + (plain ? ' plain' : ''), type:'button', 'data-key':key,
       'aria-pressed': String(state.bike === key), onclick:() => selectBike(key) },
-      plain ? null : svgEl(BIKE_ICON), label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
+      plain ? null : svgEl(bikeIconSvg(key ? bikeColor(key) : '#0B2530')), label, n != null ? h('span', { class:'n num', text:String(n) }) : null);
   box.append(mk('', t('allParts'), state.items.length || null));
   const shown = state.showAllBikes ? state.bikes : state.bikes.slice(0, CONFIG.maxBikeChips);
   shown.forEach(b => box.append(mk(b.key, b.label, b.count)));
@@ -714,15 +711,6 @@ function renderChips(){
       onclick:() => { state.showAllBikes = !state.showAllBikes; renderChips(); const b = $('#morebikes'); if(b) b.focus(); },
       text: state.showAllBikes ? t('fewerBikes') : t('moreBikes') }));
   }
-}
-function renderFeatured(){
-  const wrap = $('#featured-wrap'), box = $('#featured'); if(!wrap || !box) return;
-  const picks = state.items.filter(it => it.canOrder && it.status !== 'out').sort((a, b) => a.stock - b.stock).slice(0, 8);
-  wrap.hidden = picks.length < 3;
-  if(picks.length < 3) return;
-  box.replaceChildren();
-  picks.forEach(it => box.append(partRow(it)));
-  observePhotos();
 }
 function renderCatGrid(){
   const wrap = $('#catgrid-wrap'), box = $('#catgrid'); if(!wrap || !box) return;
@@ -903,7 +891,7 @@ function loadPhoto(row){
 }
 function observePhotos(){
   if(photoObserver) photoObserver.disconnect();
-  const rows = document.querySelectorAll('#list .part, #featured .part');
+  const rows = document.querySelectorAll('#list .part');
   if(!('IntersectionObserver' in window)){ rows.forEach(loadPhoto); return; }
   photoObserver = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ photoObserver.unobserve(e.target); loadPhoto(e.target); } });
@@ -1042,6 +1030,11 @@ function updateBar(){
   $('#bar-count').textContent = t('inOrder', { n:qty });
   $('#bar-total').textContent = money(total);
   const tn = $('#tabcartn'); if(tn){ tn.hidden = qty === 0; tn.textContent = String(qty); }
+  syncHelpFixed();
+}
+function syncHelpFixed(){
+  const hb = $('#help-banner-wrap');
+  document.body.classList.toggle('has-help-fixed', !!hb && !hb.hidden && !document.body.classList.contains('has-bar'));
 }
 
 /* ===== Order sheet ===== */
@@ -1176,7 +1169,7 @@ function setLang(l){
   renderContact();
   renderRecv();
   renderPay();
-  if(state.loaded){ renderChips(); renderBrands(); renderCatGrid(); renderFeatured(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
+  if(state.loaded){ renderChips(); renderBrands(); renderCatGrid(); renderList(); renderFooter(); if($('#sheet').open) renderSheet(); }
   else if($('#state').dataset.kind) showState($('#state').dataset.kind);
   updateBar();
 }
@@ -1190,6 +1183,7 @@ function init(){
   $('#chat').setAttribute('href', waLink('Assalam o Alaikum, I have a question about a spare part.'));
   $('#help-chat').setAttribute('href', waLink('Assalam o Alaikum, I need help finding a part.'));
   $('#help-banner-wrap').hidden = !(CONFIG.whatsapp || '').replace(/\D/g, '');
+  syncHelpFixed();
   const saved = lsGet(LS.lang);
   state.lang = (saved === 'ur' || saved === 'en') ? saved : ((navigator.language || '').toLowerCase().indexOf('ur') === 0 ? 'ur' : 'en');
   loadCart(); restoreCustomer();
